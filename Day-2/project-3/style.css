@@ -5,6 +5,7 @@
 
 .body {
     background-color: rgb(16, 19, 22);
+    overflow: hidden;
 }
 
 .header,
