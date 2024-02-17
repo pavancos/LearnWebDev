@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: antiquewhite;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 450;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px 5vw;
+
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.im-txt {
+    display: flex;
+    margin-top: 5vh;
+    justify-content: center;
+}
+
+img {
+    width: 39vmax;
+    min-width: 50px;
+}
+
+p {
+    margin-left: 0.8vw;
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+span {
+    color: rgb(211, 25, 25);
+}
+
+h2 {
+    font-family: "Kanit", sans-serif;
+    letter-spacing: 1.3px;
+    font-size: 1.9rem;
+    margin: 1.5vw 0px;
+}
+
+li{
+    list-style-position: inside;
+    margin-left: 1vw;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(160, 35, 35);
+}
+
+hr{
+    margin-top: 3vh;
+}
+
+footer{
+    margin-top: 2vh;
+}
