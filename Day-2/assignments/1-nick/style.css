@@ -5,9 +5,12 @@
 
 body {
     background-color: antiquewhite;
-    overflow: hidden;
     font-family: "Roboto", sans-serif;
     font-weight: 450;
+}
+
+header{
+    margin: 1vh 5vw 0vh 5vw;
 }
 
 .container {
@@ -15,8 +18,8 @@ body {
     flex-direction: column;
     width: 90vw;
     justify-content: center;
-    height: 100vh;
-    margin: 0px 5vw;
+    height: auto;
+    margin: 0vh 5vw 1vh 5vw;
 
 }
 
@@ -33,17 +36,21 @@ h1 {
 
 .im-txt {
     display: flex;
+    flex-direction: row;
+    gap: 6px;
     margin-top: 5vh;
     justify-content: center;
 }
 
 .im-txt img {
     width: 39vmax;
-    min-width: 50px;
+    height: 39vmax;
+    max-width: 270px;
+    max-height: 270px;
 }
 
 p {
-    margin-left: 0.8vw;
+    /* margin-left: 0.8vw; */
     display: inline;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -91,6 +98,13 @@ footer {
     height: 98vh;
     margin: 1vh 1vw;
     display: inline;
+}
+
+@media screen and (max-width: 584px) {
+    .im-txt{
+        flex-direction: column;
+    }
+
 }
 
 #i1 {
