@@ -28,6 +28,7 @@ body {
 .container h1 {
     font-size: 7.5rem;
     margin-bottom: 16px;
+    letter-spacing: 2.5px;
 }
 
 .container p {
@@ -45,13 +46,15 @@ a {
     font-size: 1.2rem;
     color: rgb(230, 222, 214);
     text-align: center;
-    border: 3px solid rgb(230, 222, 214);
+    border: 3px solid rgba(230, 222, 214, 0.589);
     display: inline-block;
     padding: 7px 14px;
     
 }
 
 a:hover {
-    background: #fff;
+    background: #eeececb0;
     color: #232323;
+    border: 3px solid #eeecec6c;
+    box-shadow: 0px 0px 10px 0px #eeececb0;
 }
