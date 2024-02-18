@@ -7,6 +7,8 @@ body {
     background-color: antiquewhite;
     font-family: "Roboto", sans-serif;
     font-weight: 450;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
 }
 
 header{
@@ -98,6 +100,10 @@ footer {
     height: 98vh;
     margin: 1vh 1vw;
     display: inline;
+}
+
+.icont img{
+    width: 26vmax;
 }
 
 @media screen and (max-width: 584px) {
