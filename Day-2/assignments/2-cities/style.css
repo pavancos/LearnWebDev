@@ -25,7 +25,31 @@ body {
     width: auto;
     height: auto;
     border-radius: 9vh;
-    box-shadow: 0 0 20vh #5f5f5f3d;
+    box-shadow: 0 0 1vh #5f5f5f0e;
+}
+
+.container:hover{
+    animation: smoothBlur 1s ease-in-out;
+}
+
+@keyframes smoothBlur {
+    0%{
+        box-shadow: 0 0 2vh #5f5f5f3d;
+    }
+    25%{
+        box-shadow: 0 0 7vh #5f5f5f3d;
+    }
+    50%{
+        box-shadow: 0 0 7vh #5f5f5f3d;
+    }
+    75%{
+        box-shadow: 0 0 13vh #5f5f5f3d;
+    }
+    100%{
+        box-shadow: 0 0 20vh #5f5f5f3d;
+    
+    }
+    
 }
 
 header h1 {

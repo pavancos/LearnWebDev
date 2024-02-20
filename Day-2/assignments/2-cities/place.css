@@ -12,9 +12,7 @@ body {
     align-items: center;
     width: 100vw;
 }
-.container{
-    /* background-color: #111016; */
-}
+
 header{
     display: flex;
     flex-direction: row;
