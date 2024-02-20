@@ -63,4 +63,7 @@ p{
     img{
         width: 20vw;
     }
+    p{
+        margin: 2px 5vw;
+    }
 }
