@@ -5,16 +5,11 @@
 
 body{
     width: 100vw;
-    padding: 0px 1vw;
 }
-
 .body {
     display: flex;
     flex-wrap: wrap;
-
-    width: 98vw;
 }
-
 .body .child1,
 .body .child2,
 .body .child3,
