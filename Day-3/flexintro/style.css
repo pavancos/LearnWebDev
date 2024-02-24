@@ -1,0 +1,22 @@
+.parent{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap:wrap;
+    border: 2px solid black;
+}
+.child1, .child2, .child3{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+.child1{
+    background-color: rgb(255, 217, 0);
+}
+.child2{
+    background-color: rgb(219, 13, 13);
+}
+.child3{
+    background-color: rgb(11, 211, 61);
+}
