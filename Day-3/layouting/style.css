@@ -35,7 +35,15 @@ header ul li{
 }
 
 main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
     height: 78vh;
+}
+main img{
+    width: 30vw;
+    border-radius: 10px;
 }
 
 footer{
