@@ -24,6 +24,11 @@ th, td {
     border-collapse: collapse;
 }
 
+.nobord{
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
 .marks{
     font-family: 'Courier New', Courier, monospace;
 }
