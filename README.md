@@ -9,4 +9,4 @@
 2. [Cities](https://pavancos.github.io/LearnWebDev/Day-2/assignments/2-cities/)
 3. [Vide](https://pavancos.github.io/LearnWebDev/Day-2/assignments/3-vide/)
 ### day-3:
-1. [Tables](https://pavancos.github.io/LearnWebDev/Day-3/assignements/1-tables/)
+1. [Tables](https://pavancos.github.io/LearnWebDev/Day-3/assignments/1-tables/)
