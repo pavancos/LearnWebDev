@@ -3,22 +3,57 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
 .cont{
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
 }
 .cont .child{
-    width: 30%;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.507);
+    text-align: center;
 }
 .cont .child figure{
     width: 100%;
-    height: 45%;
-    
+    height: 60%;
 }
 .cont .child figure img{
     width: 100%;
+    height: 100%;
     object-fit:cover;
+}
+
+button{
+    width: 90%;
+    margin-bottom: 5px;
+    height: 5%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(113, 113, 113);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:420px) {
+    .cont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont .child{
+        width: 90%;
+        gap:5%;
+    }
 }
