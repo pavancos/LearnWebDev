@@ -1,5 +1,5 @@
 :root {
-    --str: #70798b;
+    --str: #678fe0;
     --mn:#b89bb6;
     --wk: #9c7e7e;
   }
@@ -46,7 +46,7 @@ main{
 .post{
     width: 18vw;
     min-width: 250px;
-    height: 350px;
+    height: 420px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
     background-color: var(--mn);
@@ -60,9 +60,12 @@ main{
 
 .post figure{
     height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-main img{
+figure img{
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -72,7 +75,13 @@ main img{
 main p{
     padding: 6px;
 }
-
+h1{
+    font-size: 1.7rem;
+}
+h2{
+    font-size: 1rem;
+    color: rgb(55, 22, 202);
+}
 main a{
     width: 30%;
     padding: 3px 0px;
@@ -80,29 +89,19 @@ main a{
     color: rgb(255, 255, 255);
 }
 
-footer{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    background-color: var(--mn);
-    padding: 4vh 0px;
-    bottom: 0px;
+#ln{
+    width:64px;
+    position:relative;
+    top: -0.5%;
+    left: 30%;
 }
-footer p{
-    width: 9vw;
+#fb{
+    width: 64px;
+    position:relative;
+    bottom: -2.8%;
+    background-color: white;
+    border-radius: 50%;
 }
-
-footer a{
-    background-color: rgba(0, 0, 0, 0);
-}
-
-@media screen and (max-width:800px) {
-    footer{
-        position: sticky;
-    }
-}
-
 @media screen and (max-width:470px) {
     main{
         flex-direction: column;
