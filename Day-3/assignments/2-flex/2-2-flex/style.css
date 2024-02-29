@@ -1,0 +1,115 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../../../../icons/bg_vector_leaf.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    color: rgb(0, 0, 0);
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.par{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(220, 233, 204);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
+}
+nav ul{
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+a{
+    font-size: 1.1rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 88px;
+    gap: 6vh;
+
+}
+
+.post{
+    width: 18vw;
+    min-width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
+    background-color: rgb(229, 238, 219);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+}
+
+.post figure{
+    height: 40%;
+}
+
+main img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+main h1, main p{
+    padding: 6px;
+}
+
+main a{
+    width: 30%;
+    padding: 3px 0px;
+    border-radius: 18px;
+    color: rgb(255, 255, 255);
+}
+
+#tr{
+    background-color: rgb(146, 146, 146);
+}
+
+#tc{
+    background-color: rgb(218, 218, 2);
+}
+
+#fa{
+    background-color: rgb(163, 130, 194);
+}
+
+main h1{
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width:470px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    nav a{
+        font-size: 4.2vw;
+    }
+}
