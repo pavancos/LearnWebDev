@@ -24,14 +24,6 @@ body{
     justify-content: center;
 }
 
-a{
-    font-size: 1.1rem;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    background-color: var(--str);
-}
-
 main{
     width: 100vw;
     display: flex;
@@ -48,7 +40,7 @@ main{
     min-width: 250px;
     height: 420px;
     border-radius: 28px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
+    box-shadow: 2px 4px 40px rgba(0, 0, 0, 0.459);
     background-color: var(--mn);
     display: flex;
     flex-direction: column;
@@ -64,14 +56,12 @@ main{
     align-items: center;
     justify-content: center;
 }
-
 figure img{
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
 }
-
 main p{
     padding: 6px;
 }
@@ -81,12 +71,6 @@ h1{
 h2{
     font-size: 1rem;
     color: rgb(55, 22, 202);
-}
-main a{
-    width: 30%;
-    padding: 3px 0px;
-    border-radius: 18px;
-    color: rgb(255, 255, 255);
 }
 
 #ln{
@@ -108,5 +92,4 @@ main a{
         align-items: center;
         padding: 10px;
     }
-
 }
