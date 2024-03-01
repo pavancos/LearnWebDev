@@ -92,4 +92,7 @@ h2{
         align-items: center;
         padding: 10px;
     }
+    .post{
+        width: 80vw;
+    }
 }
