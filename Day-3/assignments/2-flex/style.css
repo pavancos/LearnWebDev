@@ -68,7 +68,7 @@ a{
     color: rgb(37, 37, 37);
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:725px) {
     .par{
         width: 100%;
         height: 100vh;
