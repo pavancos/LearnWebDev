@@ -10,3 +10,5 @@
 3. [Vide](https://pavancos.github.io/LearnWebDev/Day-2/assignments/3-vide/)
 ### day-3:
 1. [Tables](https://pavancos.github.io/LearnWebDev/Day-3/assignments/1-tables/)
+2. [Flex](https://pavancos.github.io/LearnWebDev/Day-3/assignments/2-flex/)
+3. [Profiles](https://pavancos.github.io/LearnWebDev/Day-3/assignments/3-team)
