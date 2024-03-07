@@ -1,4 +1,3 @@
-# Learn Web Development
 ## Assignments:
 ### Day-1:
 1. [First Web Page](https://pavancos.github.io/LearnWebDev/Day-2/assignments/1-nick/)
