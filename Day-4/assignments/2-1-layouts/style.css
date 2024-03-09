@@ -22,7 +22,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8%;
+    padding: 11%;
 
 }
 
@@ -36,18 +36,21 @@ body{
     background-color: rgb(57, 160, 237);
     grid-column: 2/2;
     grid-row: 1/1;
+    align-items: center;
 }
 
 .heading-3{
     background-color: rgb(21, 196, 163);
     grid-column: 3/3;
     grid-row: 1/1;
+    align-items: center;
 }
 
 .heading-4{
     background-color: rgb(49, 50, 44);
     grid-column: 4/4;
     grid-row: 1/1;
+    align-items: center;
 }
 
 .heading-5{
