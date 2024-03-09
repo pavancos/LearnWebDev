@@ -63,7 +63,7 @@ footer{
     color: rgb(255, 255, 255);
     display: grid;
     grid-template-rows: 30% 70%;
-    padding: 4% 10% 0px 10%;
+    padding: 4% 14% 0px 14%;
 }
 article p{
     color: rgb(226, 226, 226);
