@@ -7,15 +7,14 @@ body{
     color: white;
     background-color: red;
     font-family: "Source Sans 3";
-
+    height: 100;
 }
 .cont{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 7vh 53vh 40vh;
+    grid-template-rows: 7% 53% 40%;
     width: 100vw;
     height: 100vh;
-    
 }
 header{
     grid-column: 1/4;
@@ -56,6 +55,7 @@ footer{
     grid-row: 3/3;
     grid-template-columns: repeat(3,1fr);
     background-color: rgb(231, 0, 0);
+    height: auto;
 }
 .art-1, .art-2, .art-3{
     background-color: #521010a9;
@@ -81,4 +81,46 @@ h4{
 .art-3{
     grid-column: 3/3;
     margin-right: 0px;
+}
+
+@media screen and (max-width: 900px) {
+    html{
+        font-size: 12px ;
+    }
+}
+@media screen and (max-width: 545px) {
+    html{
+        font-size: 10px ;
+        height: auto;
+    }
+    body{
+        height: auto;
+    }
+    .cont{
+
+        grid-template-rows: 7% 53% auto;
+    }
+    img{
+        width: 80%;
+    }
+    footer{
+        grid-template-rows: repeat(3,150px);
+        grid-template-columns:auto;
+    }
+    .art-1{
+        grid-row: 1/1;
+        grid-column: 1/1;
+    }
+    .art-2{
+        grid-row: 2/2;
+        grid-column: 1/1;
+    }
+    .art-3{
+        grid-row: 3/3;
+        grid-column: 1/1;
+    }
+    .art-1, .art-2, .art-3{
+        padding: 0% 14% 0px 14%;
+        margin: 0px;
+    }
 }
