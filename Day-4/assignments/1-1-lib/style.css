@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro';
+    background:red;
+    margin:0;
+    color:white;
+}
+.cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10vh 48vh 42vh;
+}
+header{
+    grid-column: 1/4;
+    grid-row: 1/1;
+}
+section{
+    grid-column: 1/4;
+    grid-row: 2/2;
+}
