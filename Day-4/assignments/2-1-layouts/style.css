@@ -56,8 +56,25 @@ body{
     grid-row: 2/4;
 }
 
-.heading-5{
+.heading-6{
+    background-color: rgb(49, 50, 44);
+    grid-column: 2/4;
+    grid-row: 2/2;
+}
+.heading-7{
     background-color: rgb(76, 96, 133);
-    grid-column: 1/1;
+    grid-column: 4/5;
     grid-row: 2/4;
+}
+
+.heading-8{
+    background-color: rgb(57, 160, 237);
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+
+.heading-9{
+    background-color: rgb(21, 196, 163);
+    grid-column: 3/3;
+    grid-row: 3/3;
 }
