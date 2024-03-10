@@ -11,6 +11,7 @@
     grid-template-rows: repeat(3,1fr);
     gap: 4%;
     padding: 2%;
+    background-color: rgb(75, 28, 73);
 }
 .box{
     border-radius: 36px;
