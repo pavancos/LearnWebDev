@@ -1,3 +1,4 @@
+@import url("../../../../fonts/Lausanne/stylesheet.css");
 *{
     padding: 0px;
     margin: 0px;
@@ -7,6 +8,7 @@ body{
     width: 100vw;
     background-color: rgb(244, 243, 239) !important;
     color: rgb(29, 29, 29) !important;
+    font-family: 'Lausanne' !important;
 }
 .cont{
     display: grid;
