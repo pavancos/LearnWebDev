@@ -5,8 +5,8 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(244, 243, 239);
-    color: rgb(29, 29, 29);
+    background-color: rgb(244, 243, 239) !important;
+    color: rgb(29, 29, 29) !important;
 }
 .cont{
     display: grid;
@@ -18,6 +18,31 @@ body{
 
 header{
     grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100%;
+}
+
+ul{
+    margin: 0px !important;
+}
+
+.logo{
+    grid-column: 1/2;
+    margin: 0px;
+}
+svg{
+    align-self: center;
+}
+
+nav{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-nav{
+    flex-wrap: wrap;
 }
 
 img{
