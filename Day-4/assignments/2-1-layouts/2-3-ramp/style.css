@@ -126,6 +126,7 @@ img{
         grid-template-columns: 100vw;
         grid-template-rows: 18vw auto;
     }
+
     .nav-23-up-caret{
         display: none;
     }
@@ -134,5 +135,19 @@ img{
     }
     .s-nav{
         margin-right: 0.5% !important;
+    }
+}
+@media screen and (max-width:348px) {
+    .cont{
+        grid-template-columns: 100vw;
+        grid-template-rows: 18vw auto;
+    }
+    header{
+        height: auto;
+    }
+    nav{
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
