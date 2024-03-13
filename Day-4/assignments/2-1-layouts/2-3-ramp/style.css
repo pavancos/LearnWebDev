@@ -1,7 +1,7 @@
-@import url("../../../../fonts/Lausanne/stylesheet.css");
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 body{
     height: 100vh;
@@ -9,21 +9,27 @@ body{
     background-color: rgb(244, 243, 239) !important;
     color: rgb(29, 29, 29) !important;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden !important;
+    overflow-wrap: normal !important;
 }
 .cont{
     display: grid;
+    width: 100vw;
+    height: 100vh;
     grid-template-columns: 100vw;
-    grid-template-rows: 64px 80vh;
+    grid-template-rows: 64px auto;
     background-color: rgb(244, 243, 239);
     color: rgb(29, 29, 29);
+    overflow-x: hidden !important;
+    overflow-wrap: normal !important;
 }
 
 header{
     grid-row: 1/2;
-    width: 100vw;
+    width: 100%;
     height: 64px;
     display: grid;
-    position: sticky;
+    position: fixed;
     background-color: #FFFFFF;
     grid-template-columns: 150px 1fr;
     grid-template-rows: 100%;
@@ -51,6 +57,82 @@ nav{
     flex-wrap: wrap;
 }
 
+main{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    background-color: rgb(244, 243, 239) !important;
+}
+
+article{
+    width: 80%;
+    height: 60%;
+}
+
+.input-group , .form-control{
+    border-color: rgb(3, 3, 3) !important;
+    border-radius: 2px 0px 0px 2px !important;
+    background-color: rgb(244, 243, 239) !important;
+}
+
+
+
+main figure{
+    display: flex;
+    justify-content: flex-end;
+}
+
 img{
-    width: 60px;
+    height: 60%;
+    border-radius:6px;
+}
+
+@media screen and (max-width:1000px) {
+    html{
+        font-size: 10px;
+    }
+    img{
+        height: 50vw;
+    }
+}
+@media screen and (max-width:628px) {
+    html{
+        font-size: 10px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    main figure{
+        justify-content: center;
+        margin-top: 40px !important;
+    }
+    .m-nav{
+        margin-left: 1.3% !important;
+    }
+    .s-nav{
+        margin-right: 1.5% !important;
+    }
+}
+
+@media screen and (max-width:434px) {
+    .cont{
+        grid-template-columns: 100vw;
+        grid-template-rows: 18vw auto;
+    }
+    .nav-23-up-caret{
+        display: none;
+    }
+    .m-nav{
+        margin-left: 0.3% !important;
+    }
+    .s-nav{
+        margin-right: 0.5% !important;
+    }
 }
