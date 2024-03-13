@@ -7,6 +7,7 @@
 body{
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 
 .cont{
@@ -60,10 +61,10 @@ img{
     article{
         grid-row: 3/4;
         grid-column: 1/2;
-        
+
     }
     footer{
         grid-row: 4/5;
     }
-
+    
 }
