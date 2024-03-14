@@ -103,7 +103,6 @@ img{
     header{
         display: flex;
         flex-direction: column;
-
     }
     main{
         display: flex;
@@ -112,6 +111,10 @@ img{
     main figure{
         justify-content: center;
         margin-top: 40px !important;
+        height: 40vh;
+    }
+    figure img{
+        height: 80vw;
     }
     .m-nav{
         margin-left: 1.3% !important;
@@ -150,4 +153,6 @@ img{
         justify-content: center !important;
         align-items: center !important;
     }
+
+    
 }
