@@ -15,10 +15,11 @@ console.log("Value of a is: ",a);
 console.log("Data type of a is: ",typeof a); // null
 
 //Data types and Fucntionns?
-function fun(){
-    console.log("Function is called");
+function fun(where){
+    console.log("Function is called "+where);
 }
-fun();
+fun("Here");
+console.log(typeof fun);
 //array?
 let arr=[1,2,3,4,5];
 console.log(arr);
@@ -31,4 +32,10 @@ let obj={
 }
 console.log(obj);
 console.log(typeof obj);
+//strings
+let str="Hello";
+console.log(str);
+console.log(str[1]);
+console.log(str.charAt(1));
+console.log(typeof str);
 
