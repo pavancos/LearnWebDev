@@ -1,3 +1,8 @@
-div{
-    border: 1px solid black;
+
+.container{
+    margin: 20%;
+}
+
+img{
+    width: 100% !important;
 }
