@@ -17,3 +17,4 @@
 3. [Layout](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/index.html)
 4. [Box Layout](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-2-boxes/index.html)
 5. [Ramp](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-3-ramp/index.html)
+6. [Page Layout](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-4-page/index.html)
