@@ -1,4 +1,18 @@
 body{
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+}
+
+.row{
+    height: 8%;
+}
+
+.row div{
+    background-color: aliceblue;
+    text-align: center;
+    border: 0.25px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
