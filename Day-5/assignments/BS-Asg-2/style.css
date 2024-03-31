@@ -13,10 +13,11 @@ body{
 }
 
 .row div{
-    background-color: aliceblue;
+    background-color: rgb(227, 242, 255);
     text-align: center;
     border: 0.25px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: large !important;
 }
