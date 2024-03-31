@@ -14,3 +14,4 @@
 ### Day-4:
 1. [Libertarians](https://pavancos.github.io/LearnWebDev/Day-4/assignments/1-1-lib/index.html)
 2. [Best City Website](https://pavancos.github.io/LearnWebDev/Day-4/assignments/1-1-lib/1-2-best/index.html)
+3. [Layout](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/index.html)
