@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden !important;
+}
 header .card{
     background-color: #e2e3e5 !important;
 }
