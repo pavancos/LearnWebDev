@@ -1,0 +1,6 @@
+*{
+    box-sizing: border-box;
+}
+header .card{
+    background-color: #e2e3e5 !important;
+}
