@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-    <div class="container text-center p-5">
+<body class="bg-dark-subtle  ">
+    <div class="container text-center p-5 ">
         <h5 class="fs-5 ">JavaScript Assignment-2</h5>
         <div class="container-fluid ">
-            <img src="./console.png" class="img-fluid " alt="...">
+            <img src="./console.png" class="img-fluid rounded rounded-3 " alt="...">
         </div>
         <button type="button" class="  btn btn-outline-dark  mt-3" data-bs-toggle="modal" data-bs-target="#CodeModal">
             Show Code
@@ -35,40 +35,43 @@
 
     <div class="modal fade" id="CodeModal" tabindex="-1" aria-labelledby="CodeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
-            <div class="modal-content">
+            <div class="modal-content  ">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="CodeModalLabel">Code</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" style="font-family: monospace;">
+                <div class="modal-body " style="font-family: monospace;">
+                    <p class="fw-bolder ">// 1. Write a program to find big number of given two numbers</p>
                     <p>let a = 7;</p>
                     <p>let b = 18;</p>
                     <p>let c = 25;</p>
                     <p>console.log(a + " " + b + " " + c);</p>
                     <p>console.log("Greatest of two: ", a > b ? a : b);</p>
+                    <p class="fw-bolder ">// 2. Write a program to find big one in given three numbers</p>
                     <p>console.log("Greatest of three: ", a > b ? (a > c ? a : c) : b > c ? b : c);</p>
-
+                
+                    <p class="fw-bolder ">// 3. Write a function to find the factors of a given number</p>
                     <p>let n = 18;</p>
                     <p>console.log(n);</p>
                     <p>console.log("Factors Of " + n + " :");</p>
                     <p>for (let i = 1; i <= n; i++)</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;if (n % i == 0)</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);</p>
-
+                
+                    <p class="fw-bolder ">// 4. Write a function to check given number is prime or not</p>
                     <p>console.log("Prime or Not");</p>
                     <p>let cnt = 0;</p>
                     <p>for (let i = 1; i <= n; i++)</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;if (n % i == 0)</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cnt++;</p>
                     <p>(cnt == 2) ? console.log(n + " is prime") : console.log(n + " is not prime");</p>
-
+                
+                    <p class="fw-bolder ">// 5. Write a function to print even factors of given number</p>
                     <p>console.log("Even factors of " + n + " are:");</p>
                     <p>for (let i = 1; i <= n; i++) </p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;if (n % i == 0 && i % 2 == 0) </p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    <p></p>
-
+                    <p class="fw-bolder ">// 6. Write a function to receive a number as arg and return sum of its digits</p>
                     <p>console.log("Sum of Digits");</p>
                     <p>let numb = 1234;</p>
                     <p>console.log("The number is: " + numb);</p>
@@ -78,7 +81,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;numb = Math.floor(numb / 10);</p>
                     <p>}</p>
                     <p>console.log("The sum of digits is: " + s);</p>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
