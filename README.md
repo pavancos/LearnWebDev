@@ -15,3 +15,9 @@
 |           | Box Layout          | [Link](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-2-boxes/index.html) |
 |           | Ramp                | [Link](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-3-ramp/index.html) |
 |           | Page Layout         | [Link](https://pavancos.github.io/LearnWebDev/Day-4/assignments/2-1-layouts/2-4-page/index.html) |
+| **Day-5** | Card Layout         | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/BS-Asg-1/) |
+|           | BootStrap Grid      | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/BS-Asg-2/) |
+|           | Udemy Cards         | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/BS-Asg-3/) |
+|           | Pricing Page        | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/BS-Asg-4/) |
+|           | JavaScript Asg-1    | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/JS-Asg-1/) |
+|           | JavaScript Asg-2    | [Link](https://pavancos.github.io/LearnWebDev/Day-5/assignments/JS-Asg-2/) |
