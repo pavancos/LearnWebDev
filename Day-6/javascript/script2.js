@@ -149,3 +149,28 @@ let st2={
 Object.setPrototypeOf(st1,stud);
 Object.setPrototypeOf(st2,stud);
 console.log(st1);
+
+//inheritance
+class Parent{
+    college="PVP";
+    city="Vijayawada";
+    ph=1234567890;
+}
+class Child extends Parent{
+    name="Pavan";
+    age=18;
+}
+let c=new Child();
+console.log(c);
+function Parent1(){
+    this.college="PVP";
+    this.city="Vijayawada";
+    this.ph=1234567890;
+}
+function Child1(){
+    this.name="Pavan";
+    this.age=18;
+}
+Child1.prototype=new Parent1();
+let c1=new Child1();
+console.log(c1);
