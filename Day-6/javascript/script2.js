@@ -75,3 +75,46 @@ console.log(employees);
 
 let Tem=employees.filter((e)=>e.age>15 && e.age<25);
 console.log(Tem);
+
+
+//operations on object
+//key
+let obj={
+    name:"P",
+    age:21,
+    salary:2000
+};
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+//freeze
+Object.freeze(obj);
+obj.name="Raj";
+console.log(obj);
+//assign
+let ob1={
+    name:"Raj",
+    age:22,
+    salary:3000
+};
+let ob2={
+    name:"Ravi",
+    age:21,
+    salary:2000
+};
+let obj3=Object.assign({},ob1,ob2);
+console.log(obj3);
+
+//class
+class Student{
+    constructor(roll,name){
+        this.roll=roll;
+        this.name=name;
+    }
+    display(){
+        console.log(this.roll," -> ",this.name);
+    }
+}
+let s1=new Student(101,"Ravi");
+s1.display();
+let s2=new Student(102,"Raj");
+s2.display();
