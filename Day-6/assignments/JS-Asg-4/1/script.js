@@ -23,7 +23,7 @@ const mobile = {
     model: '14',
     color: 'Purple',
     screenSize: '6.2 inches',
-    operatingSystem: 'iOS'
+    operatingSystem: 'iO'
 };
 console.log(student);
 console.log(bus);
