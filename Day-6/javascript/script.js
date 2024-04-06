@@ -139,7 +139,21 @@ let even=arr.filter(function(item){
 });
 
 //find all the elements greater than 50
+//without filter
+let numbers=[10,20,30,40,50,60,70,80,90];
+let gr=[];
+for(let e of numbers){
+    if(e>50)
+        gr.push(e);
+}
+console.log(numbers);
+console.log(gr);
+let g=numbers.filter(function(item){
+    return item>50;
+});
+console.log(gr);
 
-// let greater=numbers.filter(function(item){
-//     return item>50;
-// });
+let G=numbers.filter((e)=>{
+    e>50;
+});
+console.log(G);
