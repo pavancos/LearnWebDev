@@ -120,3 +120,13 @@ let s1=new Student(101,"Ravi");
 s1.display();
 let s2=new Student(102,"Raj");
 s2.display();
+//prototype : to add properties to class after creation of object of class.
+let std1=new Student(101,"Ravi");
+let std2=new Student(102,"Raj");
+Student.prototype.clg="PVP";
+console.log(std1);
+console.log(std2);
+console.log(std1.__proto__);
+// console.log(std2.__proto__);
+console.log(std1.toString());
+
