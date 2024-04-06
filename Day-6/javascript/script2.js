@@ -130,3 +130,22 @@ console.log(std1.__proto__);
 // console.log(std2.__proto__);
 console.log(std1.toString());
 
+let stud={
+    college:"PVP",
+    city:"Vijayawada",
+    ph:1234567890,
+    display:function(){
+        console.log(this.college," -> ",this.city," -> ",this.ph);
+    }
+}
+let st1={
+    name:"Ravi",
+    age:21
+};
+let st2={
+    name:"Raj",
+    age:22
+};
+Object.setPrototypeOf(st1,stud);
+Object.setPrototypeOf(st2,stud);
+console.log(st1);
