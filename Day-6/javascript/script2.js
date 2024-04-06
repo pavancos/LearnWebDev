@@ -103,6 +103,8 @@ let ob2={
 };
 let obj3=Object.assign({},ob1,ob2);
 console.log(obj3);
+//create
+let obj4=Object.create(obj);
 
 //class
 class Student{
