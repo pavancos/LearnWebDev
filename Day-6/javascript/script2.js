@@ -20,3 +20,9 @@ console.log(gr);
 
 let G=numbers.filter((e)=>e>50);
 console.log(G);
+
+let M=numbers.map((e)=>{
+    if(e%2==0) return e+10;
+    else return e+20;
+});
+console.log(M);
