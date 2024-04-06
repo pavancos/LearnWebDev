@@ -82,3 +82,64 @@ for(let key in obj){
 //deletyion
 delete obj.city;
 console.log(obj);
+
+let student={
+    name:'Pavan',
+    age:18,
+    city:'VJA',
+    marks:{
+        maths:90,
+        science:80,
+        english:85
+    },
+    getAvg:function(){
+        return (this.marks.maths+this.marks.science+this.marks.english)/3;
+    }
+};
+console.log(student);
+console.log(student.name);
+console.log(student.age);
+console.log(student.city);
+console.log(student.marks);
+console.log(student.marks.maths);
+console.log(student.marks.science);
+console.log(student.marks.english);
+console.log(student.getAvg());
+
+//this key word
+let stud={
+    name:'Pavan',
+    age:18,
+    city:'VJA',
+    marks:{
+        maths:90,
+        science:80,
+        english:85
+    },
+    getMarks:function(){
+        return this.marks;
+    },
+};
+
+console.log(stud.getMarks());
+console.log(stud.getMarks().maths);
+
+function call(){
+	console.log("Pavan");
+}
+function ask( X ){
+	X();
+}
+ask(call);
+//filter
+//define filter: filter method creates a new array with all elements that pass the test implemented by the provided function.
+let arr=[1,2,3,4,5,6,7,8,9];
+let even=arr.filter(function(item){
+    return item%2==0;
+});
+
+//find all the elements greater than 50
+
+// let greater=numbers.filter(function(item){
+//     return item>50;
+// });
