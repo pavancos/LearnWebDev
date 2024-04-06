@@ -26,3 +26,52 @@ let M=numbers.map((e)=>{
     else return e+20;
 });
 console.log(M);
+
+numbers.forEach((element,index)=>{
+    console.log(element," -> ",index);
+});
+
+//find
+let f=numbers.find((e)=>e===50);
+console.log(f);
+
+//findIndex
+let fi=numbers.findIndex((e)=>e===50);
+console.log(fi);
+
+//reduce
+let sum=numbers.reduce((acc,e)=>{
+    return acc+e;
+},0);
+console.log(sum);
+//without reduce
+let s=0;
+for(let e of numbers){
+    s+=e;
+}
+console.log(s);
+//finding small number
+let small=numbers.reduce((acc,e)=>{
+    if(acc<e) return acc;
+    else return e;
+});
+//arrow
+let small1=numbers.reduce((acc,e)=>acc<e?acc:e);
+
+//emp
+let employees=[
+    {eno:100,sname:"Ravi",age:21,salary:2000},
+    {eno:200,sname:"Bhanu",age:25,salary:5000},
+    {eno:102,sname:"Vikas",age:30,salary:3000},
+];
+
+let young=employees.reduce((acc,e)=>acc.age<e.age?acc:e);
+console.log(young);
+
+
+employees.forEach((e)=>e.salary+5000);
+console.log(employees);
+
+
+let Tem=employees.filter((e)=>e.age>15 && e.age<25);
+console.log(Tem);
