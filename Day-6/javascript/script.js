@@ -132,13 +132,11 @@ function ask( X ){
 }
 ask(call);
 //filter
-//define filter: filter method creates a new array with all elements that pass the test implemented by the provided function.
 let arr=[1,2,3,4,5,6,7,8,9];
 let even=arr.filter(function(item){
     return item%2==0;
 });
 
-//find all the elements greater than 50
 //without filter
 let numbers=[10,20,30,40,50,60,70,80,90];
 let gr=[];
