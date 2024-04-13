@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh !important;
+}
+
+.Form {
+}
+
+.Info {
+    background: rgb(255, 41, 66);
+    background: -moz-linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
+    background: -webkit-linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
+    background: linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
+}
