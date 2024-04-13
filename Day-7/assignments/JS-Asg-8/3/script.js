@@ -1,4 +1,4 @@
 import employees from "./employee.js";
-let hydEmp=employees.filter(emp=>emp.address.city.toLowerCase()==="hyderabad");
-let hydEmpNames=hydEmp.map(emp=>emp.name);
-console.log(hydEmpNames);
+//3. Find the employees who are not from Hyderabad
+let nonHydEmp=employees.filter(emp=>emp.address.city.toLowerCase()!=="hyderabad");
+console.log("Employees not in Hyderabad: ",nonHydEmp);
