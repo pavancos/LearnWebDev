@@ -20,26 +20,27 @@
         </h1>
         <div class="card mx-auto text-bg-dark ">
             <div class="card-body text-left" style="font-family: monospace;">
-                <p>class Employee {</p>
-                    <p>&nbsp;&nbsp;constructor(name, age, salary) {</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;this.age = age;</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;this.salary = salary;</p>
-                    <p>&nbsp;&nbsp;}</p>
-                    <p>&nbsp;&nbsp;getSalary() {</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;return this.salary;</p>
-                    <p>&nbsp;&nbsp;}</p>
-                    <p>}</p>
-                    <p>const employee1 = new Employee('Abc', 30, 50000);</p>
-                    <p>const employee2 = new Employee('Def', 35, 60000);</p>
-                    <p>const employee3 = new Employee('Ghi', 25, 45000);</p>
-                    <p>const employee4 = new Employee('Jkl', 28, 55000);</p>
-                    <p>const employee5 = new Employee('Mno', 40, 70000);</p>
-                    <p>console.log(employee1.name, "Salary:", employee1.getSalary());</p>
-                    <p>console.log(employee2.name, "Salary:", employee2.getSalary());</p>
-                    <p>console.log(employee3.name, "Salary:", employee3.getSalary());</p>
-                    <p>console.log(employee4.name, "Salary:", employee4.getSalary());</p>
-                    <p>console.log(employee5.name, "Salary:", employee5.getSalary());</p>
+                <p>let Delay = false;</p>
+                <p>setTimeout(() => {</p>
+                <p>&nbsp;&nbsp;Delay = true;</p>
+                <p>}, 5000);</p>
+                <p>const promiseFiveSec = new Promise((fulfil, reject) => {</p>
+                <p>&nbsp;&nbsp;setTimeout(() => {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;if (Delay) {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fulfil("Promise Fulfiled");</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;} else {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reject("Promise rejected");</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                <p>&nbsp;&nbsp;}, 5003);</p>
+                <p>});</p>
+                <p>console.log(promiseFiveSec);</p>
+                <p>promiseFiveSec</p>
+                <p>&nbsp;&nbsp;.then((data) => {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(data);</p>
+                <p>&nbsp;&nbsp;})</p>
+                <p>&nbsp;&nbsp;.catch((error) => {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(error);</p>
+                <p>&nbsp;&nbsp;});</p>
             </div>
 
         </div>
