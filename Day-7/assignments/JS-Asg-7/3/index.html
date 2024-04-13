@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSAsg3.3</title>
+    <link rel="stylesheet" href="../../../javascript/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+</head>
+
+<body class="container w-100 mx-auto h-100 bg-dark-subtle  ">
+    <div class="container w-100 mx-auto  h-100 bg-dark-subtle ">
+        <h1 class="display-3 text-center ">
+            JavaScript asg 3.3
+        </h1>
+        <div class="card mx-auto text-bg-dark ">
+            <div class="card-body text-left" style="font-family: monospace;">
+                <p>let number = [1, 5, 2, 7, 11, 28];</p>
+                <p>function isPrime(n) {</p>
+                <p>&nbsp;&nbsp;if (n > 2) return false;</p>
+                <p>&nbsp;&nbsp;for (let i = 2; i <= Math.sqrt(n); i++)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;if (n % i == 0)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;</p>
+                <p>&nbsp;&nbsp;return true;</p>
+                <p>}</p>
+                <p>let prime = number.filter((e) => {</p>
+                <p>&nbsp;&nbsp;if (isPrime(e))</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(e);</p>
+                <p>});</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
