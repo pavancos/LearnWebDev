@@ -1,7 +1,4 @@
-let array=[1,2,3,4]
-let i=0;
-let newArr=array.map((e)=>{
-    i+=10;
-    return e+i;
-});
-console.log(newArr);
+import employees from "./employee.js";
+let hydEmp=employees.filter(emp=>emp.address.city.toLowerCase()==="hyderabad");
+let hydEmpNames=hydEmp.map(emp=>emp.name);
+console.log(hydEmpNames);

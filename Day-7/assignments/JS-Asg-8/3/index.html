@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSAsg6.3</title>
+    <title>JSAsg8.1</title>
     <link rel="stylesheet" href="../../../javascript/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -16,40 +16,23 @@
 <body class="container w-100 mx-auto h-100 bg-dark-subtle  ">
     <div class="container w-100 mx-auto  h-100 bg-dark-subtle ">
         <h1 class="display-3 text-center ">
-            JavaScript Asg 6.3
+            JavaScript Asg 8.1
         </h1>
         <div class="card mx-auto text-bg-dark ">
+
             <div class="card-body text-left" style="font-family: monospace;">
-                <p>const students = [</p>
-                <p>&nbsp;&nbsp;{ name: "ravi", marks: { maths: 89, physics: 70, chemistry: 88 } },</p>
-                <p>&nbsp;&nbsp;{ name: "bhanu", marks: { maths: 98, physics: 50, chemistry: 68 } },</p>
-                <p>&nbsp;&nbsp;{ name: "kiran", marks: { maths: 50, physics: 82, chemistry: 94 } }</p>
-                <p>];</p>
-                <p>const findH = (sub) => {</p>
-                <p>&nbsp;&nbsp;const hiStud = students.reduce((hi, stu) => {</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;const marks = stu.marks[sub];</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;if (marks > hi.hiM)</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return { hiM: marks, names: [stu.name] };</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;else if (marks === hi.hiM)</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hi.names.push(stu.name);</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;return hi;</p>
-                <p>&nbsp;&nbsp;}, { hiM: 0, names: [] }).names;</p>
-                <p>&nbsp;&nbsp;return hiStud;</p>
-                <p>};</p>
-                <p>const highM = findH('maths');</p>
-                <p>const highP = findH('physics');</p>
-                <p>const highC = findH('chemistry');</p>
-                <p>console.log("Highest in Maths:", highM);</p>
-                <p>console.log("Highest in Physics:", highP);</p>
-                <p>console.log("Highest in Chemistry:", highC);</p>
+                <p>let number=[1,5,2,7,11,28];</p>
+                <p>let sum=number.reduce((acc,e)=>acc+e);</p>
+                <p>console.log("Sum is ",sum);</p>
             </div>
+
 
         </div>
 
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
 
 </body>
 
