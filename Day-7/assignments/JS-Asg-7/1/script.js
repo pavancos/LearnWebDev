@@ -1,3 +1,5 @@
-let number=[1,5,2,7,11,28];
-let sum=number.reduce((acc,e)=>acc+e);
-console.log("Sum is ",sum);
+let str = "aaaabbababababbbbabababaaaa";
+let fA = str.split('').filter(e => e === 'a').length;
+let fB = str.split('').filter(e => e === 'b').length;
+console.log("Frequency of 'a':", fA);
+console.log("Frequency of 'b':", fB);
