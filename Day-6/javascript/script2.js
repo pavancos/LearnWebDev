@@ -174,3 +174,4 @@ function Child1(){
 Child1.prototype=new Parent1();
 let c1=new Child1();
 console.log(c1);
+
