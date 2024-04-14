@@ -15,11 +15,13 @@ body {
 }
 
 .Form {
+    background-color: #ffffff;
 }
 
-.Info {
+.Info, .LogIn {
     background: rgb(255, 41, 66);
     background: -moz-linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
     background: -webkit-linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
     background: linear-gradient(156deg, rgba(255, 41, 66, 1) 0%, rgba(255, 31, 104, 1) 100%);
 }
+
