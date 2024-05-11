@@ -41,8 +41,8 @@
 |           | JavaScript Asg-8    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-5/) |
 |           | JavaScript Asg-9    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-5/) |
 ||
-<!--| **Day-7** | JavaScript Asg-6    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-3/) |
+| **Day-7** | JavaScript Asg-6    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-3/) |
 |           | JavaScript Asg-7    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-4/) |
 |           | JavaScript Asg-8    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-5/) |
 |           | JavaScript Asg-9    | [Link](https://pavancos.github.io/LearnWebDev/Day-6/assignments/JS-Asg-5/) |
-||-->
+||
