@@ -1,6 +1,4 @@
 
-
-
 | Day       | Assignment          | Link |
 |-----------|---------------------|------|
 | **Day-1** | First Web Page      | [Link](https://pavancos.github.io/LearnWebDev/Day-2/assignments/1-nick/) |
