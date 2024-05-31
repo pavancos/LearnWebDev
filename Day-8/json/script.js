@@ -29,7 +29,7 @@ getPosts(); //call the function
 
 //using async and await
 async function getPosts(){
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const data = await res.json();
-    console.log(data);
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts'); //waits till the data is fetched
+    const data = await res.json(); //waits till res is parsed to JSON
+    console.log(data); //log the data
 }
