@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="number" name="fst" id="">
+        <input type="number" name="sec" id="">
+        <button type="submit" id="add">+</button>
+        <button type="submit" id="sub">-</button>
+        <button type="submit" id="mul">x</button>
+        <button type="submit" id="div">/</button>
+        <button type="submit" id="mod">%</button>
+    </form>
+    <h1></h1>
+    <script>
+        const frm = document.querySelector("form");
+        let first = frm.children[0];
+        let second = frm.children[1];
+        const btn = document.querySelectorAll("button");
+        btn.forEach(element => {
+            element.addEventListener("click", event => {
+                event.preventDefault();
+                let temp = 0;
+                if (element.id === "add") {
+                    temp = Number(first.value) + Number(second.value);
+                } else if (element.id === "sub") {
+                    temp = Number(first.value) - Number(second.value);
+                } else if (element.id === "mul") {
+                    temp = Number(first.value) * Number(second.value);
+                } else if (element.id === "div") {
+                    temp = Number(first.value) / Number(second.value);
+                } else if (element.id === "mod") {
+                    temp = Number(first.value) % Number(second.value);
+                }
+                let Head = document.querySelector("h1");
+                Head.textContent = temp;
+            })
+        })
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
