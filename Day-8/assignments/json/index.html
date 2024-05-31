@@ -12,10 +12,16 @@
             color: rgb(175, 175, 173);
             background-color: rgb(20, 20, 20);
         }
+        h1{
+            text-align: center;
+            color: rgb(175, 175, 173);
+            width: 60%;
+            margin: 0 auto;
+            padding: 10px;
+        }
         #table{
             margin: 0 auto;
             width: 90%;
-            overflow-x: auto;
         }
         table{
             width: 100%;
@@ -25,10 +31,26 @@
             border: 1px solid rgb(40, 84, 119);
             padding: 4px;
         }
+        #Grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 5%;
+        }
+        .card{
+            background-color: rgba(40, 84, 119, 0);
+            color: rgb(175, 175, 173);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 7px 0 rgb(40, 84, 119);
+        }
     </style>
 </head>
 <body>
     <div id="table">
+        <h1 id="tab">
+            Table
+        </h1>
         <table>
             <thead>
                 <tr>
@@ -45,8 +67,17 @@
             </tbody>
         </table>
     </div>
+    <h1 id="grid">
+        Grid
+    </h1>
+    <div id="Grid">
+        
+        
+    </div>
 
+    <script>
 
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
