@@ -21,5 +21,15 @@ const title = document.title;
 document.querySelector('#changeTit').addEventListener('click', function () {
     //change title
     document.title = "New Title";
-}
-);
+});
+
+//example 
+
+
+
+
+
+
+
+
+

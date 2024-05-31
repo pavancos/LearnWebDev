@@ -6,7 +6,17 @@
     <title>DOM</title>
 </head>
 <body>
-    <button id="changeTit">change title</button>
+    <h2 class="counter">0</h2>
+    <button class="incrementer">ADD</button>
+    <script>
+        // Selecting the elements
+        const counter = document.querySelector('.counter');
+        const incrementer = document.querySelector('.incrementer');
+        // Adding event listener
+        incrementer.addEventListener('click', () => {
+            counter.textContent = Number(counter.textContent) + 1;
+        });
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
