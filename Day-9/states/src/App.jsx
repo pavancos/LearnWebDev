@@ -21,11 +21,6 @@ function App() {
       <button onClick={inc}>INCREMENT</button>
       <button onClick={dec}>DECREMENT</button>
       <button onClick={res}>RESET</button>
-      <br />
-      <h2>{person.name}</h2>
-      <h2>{person.age}</h2>
-      <h2>{person.pid}</h2>
-      <button onClick={changeName}>CHANGE NAME</button>
     </div>
   )
 }
