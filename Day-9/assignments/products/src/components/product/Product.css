@@ -1,0 +1,54 @@
+.card{
+    width: 270px;
+    height: 550px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(238, 238, 238);
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+figure{
+    display: flex;
+    justify-content: center;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price{
+    font-weight: bold;
+}
+.desc{
+    font-size: 16px;
+    opacity: 0.7;
+}
+.cat{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(39, 171, 194);
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border-radius: 18px;
+    
+}
+.rate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+span{
+    font-size: 18px;
+    font-weight:100;
+    opacity: 0.7;
+    margin: 0 5px;
+}
