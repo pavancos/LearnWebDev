@@ -5,7 +5,7 @@ const Navbar = () => {
     <header>
         <figure className='logohold'>
             <img className='logo' src="./batlogo.png" alt="Profile" />
-            <figcaption>Batman</figcaption>
+            <figcaption>HQ</figcaption>
         </figure>
         <nav>
             <ul>
