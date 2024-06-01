@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   const[person, setPerson] = useState({ name: 'pavan', age: 19, pid: 1234 });
   const changeName = () => {
-	  if ( person.nmae === 'pavan'){
+	  if ( person.name === 'pavan'){
 		  setPerson({ ...person, name: 'vignesh' });
 	  }
 	  else {
