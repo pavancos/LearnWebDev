@@ -1,7 +1,8 @@
 footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -10,4 +11,16 @@ footer p{
     font-size: 0.8rem;
     opacity: 0.7;
 
+}
+.LinkList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.FootLsit{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

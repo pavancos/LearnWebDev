@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <User></User>
-      <Footer></Footer>
     </div>
   )
 }

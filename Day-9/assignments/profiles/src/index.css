@@ -38,10 +38,10 @@ body{
     font-size: 0.5rem;
   }
 }
-@media screen and (min-width: 1019px){
+/* @media screen and (min-width: 1019px){
   footer{
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-}
+} */
