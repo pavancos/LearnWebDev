@@ -1,6 +1,6 @@
 import React from 'react'
-import Userlist from '../userlist/Userlist'
-import './User.css' 
+import Profile from '../Profile/Profile'
+import './Profiles.css' 
 const User = () => {
     //8 DC Superhero data
     const users = [
@@ -27,7 +27,7 @@ const User = () => {
   return (
     <main>
         {users.map(user => (
-            <Userlist key={user.id} user={user} />
+            <Profile key={user.id} user={user} />
         ))}    
     </main>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Userlist.css'
+import './Profile.css'
 const Userlist = (props) => {
   return (
     <section className='card'>
