@@ -66,7 +66,7 @@ function App() {
       {name === 'pavan' ? <h1>Hi Pavan</h1> : <h1>Hi Guest</h1>}
 
       <button onClick={() => alert('Hello')}>Click Me</button>
-      <button onClick={() => alert('Hello', name)}>Click Me</button>
+      <button onClick={() => alert('Hello', name)}>Click Me Parameterised</button>
 
     </div>
     </>
