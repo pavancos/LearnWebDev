@@ -23,8 +23,11 @@ body{
   body{
     font-size: 0.8rem;
   }
-  nav{
+  .NavLinks{
     display: none;
+  }
+  .Socials{
+    width: 50%;
   }
 }
 @media screen and (max-width: 480px){
@@ -37,11 +40,10 @@ body{
   body{
     font-size: 0.5rem;
   }
+  .Socials{
+    display: none;
+  }
 }
 @media screen and (min-width: 1019px){
-  footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  
 }
