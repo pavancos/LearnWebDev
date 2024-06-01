@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            color: rgb(209, 209, 209);
+            background-color: rgb(27, 27, 27);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 50%;
+        }
+        input {
+            padding: 16px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            border: none;
+        }
+        .btns{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+
+        }
+        button {
+            padding: 16px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        h1{
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="number" name="fst" id="">
+        <input type="number" name="sec" id="">
+        <div class="btns">
+            <button type="submit" id="add">+</button>
+            <button type="submit" id="sub">-</button>
+            <button type="submit" id="mul">x</button>
+            <button type="submit" id="div">/</button>
+            <button type="submit" id="mod">%</button>
+        </div>
+        <h1></h1>
+    </form>
+    
+    <script>
+        const frm = document.querySelector("form");
+        let first = frm.children[0];
+        let second = frm.children[1];
+        const btn = document.querySelectorAll("button");
+        btn.forEach(element => {
+            element.addEventListener("click", event => {
+                event.preventDefault();
+                let temp = 0;
+                if (element.id === "add") {
+                    temp = Number(first.value) + Number(second.value);
+                } else if (element.id === "sub") {
+                    temp = Number(first.value) - Number(second.value);
+                } else if (element.id === "mul") {
+                    temp = Number(first.value) * Number(second.value);
+                } else if (element.id === "div") {
+                    temp = Number(first.value) / Number(second.value);
+                } else if (element.id === "mod") {
+                    temp = Number(first.value) % Number(second.value);
+                }
+                let Head = document.querySelector("h1");
+                Head.textContent = temp;
+            })
+        })
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

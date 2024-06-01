@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            color: rgb(209, 209, 209);
+            background-color: rgb(27, 27, 27);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(85, 85, 85);
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+        input {
+            padding: 16px;
+            margin: 10px;
+            width: 100%;
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            border: none;
+        }
+        button {
+            padding: 16px;
+            margin: 10px;
+            width: 100%;
+            border-radius: 8px;
+            background-color: rgb(23, 49, 97);
+            color: rgb(233, 233, 233);
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        h1{
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            color: white;
+        }
+        ul{
+            list-style-type: none;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+        }
+        .factors{
+            background-color: rgb(85, 85, 85);
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="number" name="NUM" id="">
+        <button type="submit">Generate Factors</button>
+        <div class="factors">
+            <h1>Factors</h1>
+
+
+        </div>
+        
+    </form>
+    
+    <script>
+        const form = document.querySelector('form');
+        const factors = document.querySelector('.factors');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let UL=document.createElement('ul');
+            factors.appendChild(UL);
+            const num = parseInt(form.NUM.value);
+            for(let i = 1; i <= num; i++){
+                if(num % i === 0){
+                    let LI=document.createElement('li');
+                    LI.textContent=i;
+                    UL.appendChild(LI)
+                }
+            }
+        });
+        
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
