@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
 import Signup from './components/signup/Signup'
 import Login from './components/Login/Login'
+import RegUsers from './components/regusers/RegUsers'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Users from './components/users/Users'
 import RootLayout from './RootLayout'
@@ -33,6 +34,10 @@ function App({ children }) {
         {
           path:'users',
           element:<Users />
+        },
+        {
+          path:"regusers",
+          element:<RegUsers />
         }
       ]
     },

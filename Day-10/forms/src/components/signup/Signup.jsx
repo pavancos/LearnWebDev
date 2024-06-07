@@ -1,14 +1,31 @@
-import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Navigate, Outlet } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import RegUsers from '../regusers/RegUsers'
+import { useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const Signup = () => {
   let { register, handleSubmit, formState: { errors } } = useForm()
   let [regUsers, setRegUsers] = useState([])
+  let navigate = useNavigate()
+  let location = useLocation()
 
   function handleFormSubmit(data) {
-    setRegUsers([...regUsers, data])
+    navigate('/regusers', { state: data })
   }
+
+  // function handleFormSubmit(data) {
+  //   setRegUsers([...regUsers, data])
+  //   navigate('/regusers', { state: regUsers })
+  // }
+  // function handleFormSubmit(data) {
+  //   setRegUsers(prevRegUsers => {
+  //     const updatedRegUsers = [...prevRegUsers, data];
+  //     navigate('/regusers', { state: updatedRegUsers });
+  //     return updatedRegUsers;
+  //   });
+  // }
 
   return (
     <div className=' bg-warning w-50 mx-auto mt-5 p-4 rounded'>
@@ -28,25 +45,6 @@ const Signup = () => {
         </div>
         <button type="submit" className='btn btn-success'>Submit</button>
       </form>
-      <div>
-        <h2>Registered Users</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {regUsers.map((user, index) => (
-              <tr key={index}>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </div>
   )
 }
