@@ -3,7 +3,8 @@ import React from 'react'
 const Signup = () => {
   return (
     <div className=' h-100 bg-warning'>
-        Signup
+        <h1>Signup</h1>
+        
     </div>
   )
 }
