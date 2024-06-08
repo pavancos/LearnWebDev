@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import React, {useState } from 'react'
+import RegForm from './components/regform/RegForm'
 import './App.css'
-import Parent from './components/parent/Parent'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 function App({ children }) {
   return (
-    <>
-      <Parent></Parent>
-    </>
+    <div className="d-flex flex-column justify-content-center align-content-center flex-wrap bg-danger bg-gradient h-100">
+      <RegForm></RegForm>
+    </div>
   )
 }
 
