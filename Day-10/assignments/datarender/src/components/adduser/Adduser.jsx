@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Userlist from '../userlist/Userlist'
 import { useForm } from 'react-hook-form';
 const Adduser = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState:errors } = useForm();
     let [userList, setUserList] = useState([]);
     const onSubmit = (data) => {
         setUserList([...userList, data]);
     }
-
     return (
         <div className="w-100 container-fluid bg-dark">
             <h1 className="text-center text-light p-3">User Registration</h1>
@@ -38,9 +37,7 @@ const Adduser = () => {
                 </div>
             </form>
             <Userlist userList={userList}></Userlist>
-
         </div>
     )
 }
-
 export default Adduser
