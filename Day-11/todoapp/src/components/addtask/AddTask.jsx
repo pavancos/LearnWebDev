@@ -1,19 +1,20 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
+const AddTask = (props) => {
+    let { register, handleSubmit, formState: { errors } } = useForm()
+    function handleFormSubmit(data) {
+        props.list.setTasks([...props.list.tasks, data.taskName])
+    }
 
-const AddTask = () => {
   return (
-    <div className="text-center w-25">
+    <div className="text-center w-25 rounded border-black shadow-sm p-4 ">
         <h2>Add Task</h2>
-        <form>
+        <form className='form ' onSubmit={handleSubmit(handleFormSubmit)}>
             <div className="form-group">
             <label htmlFor="taskName">Task Name</label>
-            <input type="text" className="form-control" id="taskName" placeholder="Enter Task Name" />
+            <input type="text" {...register('taskName')} className="form-control" id="taskName" placeholder="Enter Task Name" />
             </div>
-            <div className="form-group">
-            <label htmlFor="taskDesc">Task Description</label>
-            <textarea className="form-control" id="taskDesc" rows="3"></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Add Task</button>
+            <button type="submit" className="btn btn-primary mt-4">Add Task</button>
         </form>
     </div>
   )
