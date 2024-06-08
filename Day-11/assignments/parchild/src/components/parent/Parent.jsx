@@ -7,13 +7,12 @@ const Parent = () => {
         setSample(data)
     }
     return (
-        <div className='bg-dark max-auto mt-5 p-4 text-light text-center '>
+        <div className='bg-danger bg-gradient mx-auto p-5  text-center h-100 d-flex flex-column font-monospace '>
             <h1>Parent</h1>
-            <button className='btn btn-danger p-3'onClick={()=>{
-                setCounter(counter+1)
-            }}  >Increement</button>
-            <h3>Counter in Parent: {counter}</h3>
-            <h3>Data from Child: {sample}</h3>
+            <div className='bg-dark mx-auto p-4 mb-3 rounded-4'>
+            <h3 className='text-light'>Counter : {counter}</h3>
+            </div>
+            
             <Child count={{counter, setCounter}} passToParent={getDataFromChild} />
         </div>
     )
