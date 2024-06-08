@@ -33,7 +33,8 @@ const Signup = () => {
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <div className="mb-3">
           <label htmlFor="username" className='form-label'>Username</label>
-          <input type="text" {...register('username')} className='form-control' id="username" />
+          <input type="text" {...register('username',{required:true,minLength:4,maxLength:8})} className='form-control' id="username" />
+          {errors.username && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
         </div>
         <div className="mb-3">
           <label htmlFor="password" className='form-label'>Password</label>

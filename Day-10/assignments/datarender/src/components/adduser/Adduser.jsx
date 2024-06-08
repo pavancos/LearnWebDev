@@ -15,17 +15,17 @@ const Adduser = () => {
                 {/* Username */}
                 <div className="mt-2">
                     <label htmlFor="username" className="form-lable">Username:</label>
-                    <input type="text" {...register('username')} id="username" className="form-control" />
+                    <input type="text" {...register('username',{required:true,minLength:4,maxLength:8})} id="username" className="form-control" />
                 </div>
                 {/* Date of Birth */}
                 <div className="mt-3">
                     <label htmlFor="date" className="form-lable">Date of birth:</label>
-                    <input type="date" id="dateofb" {...register('dateofb')} className="form-control" />
+                    <input type="date" id="dateofb" {...register('dateofb',{required:true})} className="form-control" />
                 </div>
                 {/* City */}
                 <div className="mt-3">
                     <label htmlFor="city" className="form-lable">City:</label>
-                    <input type="text" {...register('city')} id="city" className="form-control" />
+                    <input type="text" {...register('city',{required:true})} id="city" className="form-control" />
                 </div>
                 {/* Submit */}
                 <div>
