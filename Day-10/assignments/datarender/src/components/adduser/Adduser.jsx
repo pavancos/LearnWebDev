@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Userlist from '../userlist/Userlist'
 import { useForm } from 'react-hook-form';
+
 const Adduser = () => {
-    const { register, handleSubmit, formState:errors } = useForm();
+    const { register, handleSubmit, formState:{ errors } } = useForm();
     let [userList, setUserList] = useState([]);
     const onSubmit = (data) => {
         setUserList([...userList, data]);
@@ -16,8 +17,8 @@ const Adduser = () => {
                     <label htmlFor="username" className="form-lable">Username:</label>
                     <input type="text" {...register('username', { required: true, minLength: 4, maxLength: 8 })} id="username" className="form-control" />
                     {errors.username?.type === 'required' && <span className='text-danger'>Username is required</span>}
-                    {errors.username?.type === 'minLength' && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
-                    {errors.username?.type === 'maxLength' && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
+                    {errors.username?.type === 'minLength' && <span className='text-danger'>Username must be at least 4 characters long</span>}
+                    {errors.username?.type === 'maxLength' && <span className='text-danger'>Username must not exceed 8 characters</span>}
                 </div>
                 {/* Date of Birth */}
                 <div className="mt-3">
