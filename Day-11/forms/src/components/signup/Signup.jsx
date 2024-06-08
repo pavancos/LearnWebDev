@@ -11,8 +11,22 @@ const Signup = () => {
   let navigate = useNavigate()
   let location = useLocation()
 
-  function handleFormSubmit(data) {
-    navigate('/regusers', { state: data })
+  // function handleFormSubmit(data) {
+  //   navigate('/regusers', { state: data })
+  // }
+  async function handleFormSubmit(data) {
+    let res = await fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    let result = await res.json()
+    setRegUsers([...regUsers, result])
+    if(res.status === 201) {
+      navigate('/regusers')
+    }
   }
 
   // function handleFormSubmit(data) {
@@ -33,7 +47,7 @@ const Signup = () => {
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <div className="mb-3">
           <label htmlFor="username" className='form-label'>Username</label>
-          <input type="text" {...register('username',{required:true,minLength:4,maxLength:8})} className='form-control' id="username" />
+          <input type="text" {...register('username', { required: true, minLength: 4, maxLength: 8 })} className='form-control' id="username" />
           {errors.username && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
           {errors.username?.type === 'required' && <span className='text-danger'>Username is required</span>}
           {errors.username?.type === 'minLength' && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
@@ -41,11 +55,11 @@ const Signup = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="password" className='form-label'>Password</label>
-          <input type="password" {...register('password',{required:true})} className='form-control' id="password" />
+          <input type="password" {...register('password', { required: true })} className='form-control' id="password" />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className='form-label'>Email</label>
-          <input type="email" {...register('email',{required:true})} className='form-control' id="email" />
+          <input type="email" {...register('email', { required: true })} className='form-control' id="email" />
         </div>
         <button type="submit" className='btn btn-success'>Submit</button>
       </form>
