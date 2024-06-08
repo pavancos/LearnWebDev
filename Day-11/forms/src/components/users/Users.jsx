@@ -4,7 +4,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users',{method:'GET'}) /* GET Request*/
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);
