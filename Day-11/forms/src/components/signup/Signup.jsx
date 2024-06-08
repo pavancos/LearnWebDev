@@ -35,14 +35,17 @@ const Signup = () => {
           <label htmlFor="username" className='form-label'>Username</label>
           <input type="text" {...register('username',{required:true,minLength:4,maxLength:8})} className='form-control' id="username" />
           {errors.username && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
+          {errors.username?.type === 'required' && <span className='text-danger'>Username is required</span>}
+          {errors.username?.type === 'minLength' && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
+          {errors.username?.type === 'maxLength' && <span className='text-danger'>Username must be 4 to 8 characters long</span>}
         </div>
         <div className="mb-3">
           <label htmlFor="password" className='form-label'>Password</label>
-          <input type="password" {...register('password')} className='form-control' id="password" />
+          <input type="password" {...register('password',{required:true})} className='form-control' id="password" />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className='form-label'>Email</label>
-          <input type="email" {...register('email')} className='form-control' id="email" />
+          <input type="email" {...register('email',{required:true})} className='form-control' id="email" />
         </div>
         <button type="submit" className='btn btn-success'>Submit</button>
       </form>
