@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+
 const UserList = () => {
     let [usersList, setUsersList] = React.useState([])
     async function fetchData() {
@@ -12,14 +13,16 @@ const UserList = () => {
         fetchData()
     }, [])
     return (
-        <div>
-            <h1>User List</h1>
-
-            {usersList.map((user) => (
-                <Link key={user.id}>{user.name}</Link>
-            ))}
-
-        </div>
+        <Router>
+            <div>
+                <h1>User List</h1>
+                <ul>
+                    {usersList.map((user) => (
+                        <li><Link key={user.id} to={`/user/${user.id}`}>{user.name}</Link></li>
+                    ))}
+                </ul>
+            </div>
+        </Router>
     )
 }
 
