@@ -12,7 +12,11 @@ import RegUsers from './components/regusers/RegUsers'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Users from './components/users/Users'
 import RootLayout from './RootLayout'
+import {sampleContext} from './Context/sampleContext'
+import {useContext} from 'react'
 function App({ children }) {
+  let {a, setA} = useContext(sampleContext)
+  console.log(a)
   //create a browser router object
   const browserRouter = createBrowserRouter([
     {
