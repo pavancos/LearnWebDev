@@ -1,12 +1,23 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
 
 import './Register.css'
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
-  const onSubmit = (data) => {
-    console.log(data)
+  let [users, setUsers] = useState([{}])
+  async function onSubmit (data) {
+    let res = await fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    let result = await res.json()
+    setUsers([...users, result])
   }
+
   return (
     <div className='pt-4' >
       <h3 className=' text-center '>Register</h3>
