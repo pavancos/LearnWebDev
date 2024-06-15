@@ -25,6 +25,8 @@ const Register = () => {
     }catch(err){
       console.log(err)
     }
+
+
     
     
   }
@@ -61,7 +63,7 @@ const Register = () => {
               <label htmlFor="mobilenumber">Mobile Number</label>
               <input type="text" className="form-control" id="mobilenumber"
                 {...register('mobilenumber', { required: true })} />
-              {errors.mobilenumber && <span className='text-danger'> Password is required</span>}
+              {errors.mobilenumber && <span className='text-danger'> Mobile Number is required</span>}
             </div>
             {/* profilepicture */}
             <div className="form-group">
