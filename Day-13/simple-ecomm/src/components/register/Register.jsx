@@ -1,21 +1,32 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 import './Register.css'
 const Register = () => {
+  let navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
   let [users, setUsers] = useState([{}])
-  async function onSubmit (data) {
-    let res = await fetch('http://localhost:3000/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    let result = await res.json()
-    setUsers([...users, result])
+  async function onSubmit(data) {
+    try {
+      let res = await fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+
+      })
+      let result = await res.json()
+      setUsers([...users, result])
+      if (res.status === 201) {
+        navigate("/login")
+      }
+    }catch(err){
+      console.log(err)
+    }
+    
+    
   }
 
   return (
@@ -52,7 +63,7 @@ const Register = () => {
                 {...register('mobilenumber', { required: true })} />
               {errors.mobilenumber && <span className='text-danger'> Password is required</span>}
             </div>
-            {/* profilepicture Link */}
+            {/* profilepicture */}
             <div className="form-group">
               <label htmlFor="profilepicture">Profile Picture</label>
               <input type="text" className="form-control" id="profilepicture"
