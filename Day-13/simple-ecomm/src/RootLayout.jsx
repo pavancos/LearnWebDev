@@ -7,7 +7,7 @@ const RootLayout = () => {
         <div>
             <Header />
 
-            <div style={{minHeight:'100vh'}} className='container'>
+            <div style={{minHeight:'100vh'}} className='text-light bg-dark'>
                 <Outlet />
             </div>
 
