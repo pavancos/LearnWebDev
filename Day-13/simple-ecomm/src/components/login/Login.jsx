@@ -2,9 +2,12 @@ import React, { useEffect, useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { userLoginContext } from '../../contexts/userLoginContext'
+import { HiEye } from "react-icons/hi";
+import { HiEyeOff } from "react-icons/hi";
 import './Login.css'
 const Login = () => {
   let { currUser, loginUser, loginStatus } = useContext(userLoginContext)
+  let [showPass, setShowPass] = useState(false)
   let navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
   async function onSubmit(data) {
@@ -15,6 +18,7 @@ const Login = () => {
   // if (loginStatus) {
   //   navigate('/')
   // }},[loginStatus])
+
 
   return (
     <div className='pt-4' >
@@ -32,8 +36,15 @@ const Login = () => {
             {/* password */}
             <div className="form-group mb-2">
               <label htmlFor="password">Password</label>
-              <input type="password" className="form-control" id="password"
-                {...register('password', { required: true })} />
+              <div className="input-group mb-2">
+                <input type={showPass ? "text" : "password"} className="form-control d-inline" id="password"
+                  {...register('password', { required: true })} />
+                <button className='btn btn-light pb-2' type='button' onClick={() => setShowPass(!showPass)}>
+                  {showPass ? <HiEyeOff /> : <HiEye />}
+                </button>
+              </div>
+
+
               {errors.password && <span className='text-danger'>Password is required</span>}
             </div>
             <button type="submit" className="btn btn-primary bg-gradient">Login</button>
