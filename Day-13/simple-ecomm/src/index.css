@@ -9,7 +9,7 @@
 /* :root matches root element */
 :root {
   --light-color: hsl(0, 0%, 93%);
-  --medium-dark: hsl(210, 29%, 24%);
+  --medium-dark: hsl(211, 18%, 23%);
   --dark-green: hsl(171, 52%, 18%);
   --light-green: hsl(115, 94%, 33%);
   --teal-blue: hsl(203, 92%, 19%);
