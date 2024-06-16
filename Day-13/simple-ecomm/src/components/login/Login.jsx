@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { userLoginContext } from '../../contexts/userLoginContext'
 import './Login.css'
 const Login = () => {
-  let { loginUser,loginStatus } = React.useContext(userLoginContext)
+  let { currUser ,loginUser,loginStatus } = useContext(userLoginContext)
   let navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
   async function onSubmit(data) {

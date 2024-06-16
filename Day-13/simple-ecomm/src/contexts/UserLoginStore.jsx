@@ -5,30 +5,34 @@ import { useState, useEffect } from 'react';
 import React from 'react'
 
 const UserLoginStore = ({children}) => {
-    let [currUser, setCurrUser] = useState({})
+    let [currUser, setCurrUser] = useState([{}])
     let [loginStatus, setLoginStatus] = useState(false)
     async function loginUser(userDet) {
         try {
-            let res = await fetch(`http://localhost:3000/users?username=${userDet.username}&password=${userDet.password}`)
-            let listUser = await res.json()
-            if (listUser.length == 0) {
+            // let res = await fetch(`http://localhost:3000/users?username=${userDet.username}&password=${userDet.password}`)
+            let res = await fetch(`https://j46m624g-3000.inc1.devtunnels.ms/users?password=${userDet.password}&username=${userDet.username}`)
+            let curr = await res.json()
+            if (curr.length == 0 || curr[0].password != userDet.password) {
                 console.log('User not found')
+                console.log(curr[0].password+" "+userDet.password)
                 setCurrUser(null)
                 setLoginStatus(false)
             }
             else {
-                setCurrUser(listUser)
-                setLoginStatus(true)               
+                setCurrUser(curr[0])
+                setLoginStatus(true)
+                console.log(curr[0])
+                console.log(loginStatus)            
             }
         } catch (err) {
             console.log(err)
         }
     }
 
-    const logoutUser = () => {
-        setCurrUser({})
-        setLoginStatus(false)
-    }
+    // const logoutUser = () => {
+    //     setCurrUser({})
+    //     setLoginStatus(false)
+    // }
 
     return (
         <userLoginContext.Provider value={{ currUser, loginUser,loginStatus }}>
