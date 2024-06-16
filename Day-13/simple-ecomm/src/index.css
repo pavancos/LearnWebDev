@@ -25,3 +25,21 @@
   --dark-cyan: hsl(205, 55%, 4%);
   --light-cyan: hsl(188, 35%, 41%);
 }
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2029; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
