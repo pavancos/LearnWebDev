@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className='d-flex flex-column align-content-center flex-wrap' style={{ height: '100vh' }}>
       <div className="row w-100 p-4 h-75" style={{ backgroundColor: "var(--dark-cyan)" }}>
-        <div className="col-5">
+        <div className="col col-sm col-md-5 col-lg-5 col-xl-5 col-xxl-5">
           <h1 className='display-2'
           onClick={() => { setRegister(false); setLogin(false) }}
           >
