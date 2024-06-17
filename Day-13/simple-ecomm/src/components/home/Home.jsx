@@ -15,6 +15,7 @@ const Home = () => {
           onClick={() => { setRegister(false); setLogin(false) }}
           >
             Simple Ecomm
+            
           </h1>
           <p className="lead">a simple e-commerce website</p>
           <p className="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto molestias quae blanditiis aspernatur quod, officiis alias ipsam vero rerum, repudiandae aut vel modi temporibus natus quasi accusantium distinctio assumenda expedita.</p>
