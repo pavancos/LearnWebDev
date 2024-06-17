@@ -9,7 +9,7 @@
 /* :root matches root element */
 :root {
   --light-color: hsl(0, 0%, 93%);
-  --medium-dark: hsl(210, 29%, 24%);
+  --medium-dark: hsl(211, 18%, 23%);
   --dark-green: hsl(171, 52%, 18%);
   --light-green: hsl(115, 94%, 33%);
   --teal-blue: hsl(203, 92%, 19%);
@@ -24,4 +24,22 @@
   --light-purple: hsl(281, 71%, 38%);
   --dark-cyan: hsl(205, 55%, 4%);
   --light-cyan: hsl(188, 35%, 41%);
+}
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2029; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
