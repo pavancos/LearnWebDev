@@ -21,7 +21,7 @@ const Cart = () => {
 
   async function removeFromCart(id) {
     try {
-      const queryURL = `http://localhost:3000/user-cart?id=${id}`;
+      const queryURL = `http://localhost:3000/user-cart/${id}`;
       let res = await fetch(queryURL, {
         method: "DELETE"
       });
