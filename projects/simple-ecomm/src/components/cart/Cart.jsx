@@ -18,6 +18,27 @@ const Cart = () => {
       console.log(err)
     }
   }
+
+  async function removeFromCart(id) {
+    try {
+      const queryURL = `http://localhost:3000/user-cart?id=${id}`;
+      let res = await fetch(queryURL, {
+        method: "DELETE"
+      });
+      console.log(res);
+      if (res.status === 200) {
+        console.log("product removed from cart");
+        getCart();
+      }
+      
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+
+
   useEffect(() => {
     getCart()
   },[])
@@ -31,7 +52,7 @@ const Cart = () => {
               {cartProds.map((product) => {
                 return (
                   product.title &&
-                  <Product prod={product} key={product.id} logText={logText[0]} />
+                  <Product prod={product} key={product.id} logText={logText[0]} mainLog={removeFromCart} />
                 )
               })}
           </div>

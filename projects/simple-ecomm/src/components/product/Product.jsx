@@ -5,12 +5,12 @@ import './Product.css';
 import { set } from 'react-hook-form';
 
 
-const Product = ({ prod, logText }) => {
-  let { currUser, loginUser, loginStatus, logoutUser } = useContext(userLoginContext);
+const Product = ({ prod, logText,mainLog }) => {
+  let { currUser} = useContext(userLoginContext);
   let [currProd, setCurrProd] = useState({});
   useEffect(() => {
-    setCurrProd(prod)
-  }, []);
+    setCurrProd(prod);
+  }, [prod])
   async function addToCart(currProd) {
     try {
       currProd.username = currUser.username;
@@ -28,20 +28,7 @@ const Product = ({ prod, logText }) => {
     }
   }
 
-  async function removeFromCart(currProd) {
-    try {
-      const queryURL = `http://localhost:3000/user-cart?id=${currProd.id}`;
-      let res = await fetch(queryURL, {
-        method: "DELETE"
-      });
-      console.log(res);
-      if (res.status === 200) {
-        console.log("product removed from cart");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  
 
   return (
     <div className="card bg-black border-secondary m-2 p-2 text-light" style={{ maxWidth: '250px' }}>
@@ -66,7 +53,7 @@ const Product = ({ prod, logText }) => {
         {
           (logText)?
             <button type="button" className="btn btn-outline-primary w-100"
-              onClick={() => { removeFromCart(currProd) }}
+              onClick={() => { mainLog(currProd.id) }}
             >
               {logText}
             </button>
