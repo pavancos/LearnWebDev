@@ -19,7 +19,7 @@ const UserProfile = () => {
         <div className="row">
           <div className="col-11 col-sm-10 col-md-6 mx-auto">
             <div className="card text-bg-secondary">
-              <img src={currUser.profilepicture} className="card-img-top" alt="https://i.pinimg.com/736x/44/a6/71/44a67140daac9f67b93315c07b8e2ae0.jpg" />
+              <img src={currUser.profilepicture} className="card-img-top object-fit-contain" />
               <div className="card-body">
                 <h5 className="card-title">{currUser.username}</h5>
                 <h6 className="card-subtitle mb-1">Email: {currUser.email}</h6>
@@ -39,7 +39,7 @@ const UserProfile = () => {
           </div>
 
         </div>
-        <div>
+        <div className='pt-5'>
           <Outlet></Outlet>
         </div>
       </div>

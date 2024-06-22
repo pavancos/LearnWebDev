@@ -10,6 +10,7 @@ import Products from './components/products/Products';
 import RoutingError from './components/RoutingError';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import Edituser from './components/edituser/Edituser';
 
 function App() {
   const browserRouter = createBrowserRouter([
@@ -62,6 +63,10 @@ function App() {
         {
           path: 'products',
           element: <Products />,
+        },
+        {
+          path:'edituser',
+          element:<Edituser/>,
         }
       ],
     },

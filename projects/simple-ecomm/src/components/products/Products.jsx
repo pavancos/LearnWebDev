@@ -22,7 +22,7 @@ const Products = () => {
 
   return (
     <>
-      <div className="container pt-4 bg-secondary mt-4 rounded rounded-2">
+      <div className="container pt-4 bg-secondary rounded rounded-2">
         <h3 className='text-center text-black'>Products</h3>
           <div className="d-flex flex-wrap justify-content-evenly pb-3 pt-2 ">
               {products.map((product) => {

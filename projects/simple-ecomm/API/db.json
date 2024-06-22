@@ -23,6 +23,14 @@
       "password": "test",
       "mobilenumber": "78985456",
       "profilepicture": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "2810",
+      "username": "sonu",
+      "email": "poornimarayavarapu@gmail.com",
+      "password": "sonu",
+      "mobilenumber": "9988776655",
+      "profilepicture": "https://i.pinimg.com/736x/b4/7f/72/b47f7267343886c02c882597486ef806.jpg"
     }
   ],
   "products": [
@@ -1823,128 +1831,5 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
     }
   ],
-  "user-cart": [
-    {
-      "id": "4",
-      "title": "Red Lipstick",
-      "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
-      "category": "beauty",
-      "price": 12.99,
-      "discountPercentage": 19.03,
-      "rating": 2.51,
-      "stock": 68,
-      "tags": [
-        "beauty",
-        "lipstick"
-      ],
-      "brand": "Chic Cosmetics",
-      "sku": "O5IF1NTA",
-      "weight": 5,
-      "dimensions": {
-        "width": 14.37,
-        "height": 13.94,
-        "depth": 14.6
-      },
-      "warrantyInformation": "Lifetime warranty",
-      "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 5,
-          "comment": "Great product!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Leo Rivera",
-          "reviewerEmail": "leo.rivera@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Very pleased!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Oscar Powers",
-          "reviewerEmail": "oscar.powers@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Very pleased!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Carter Rivera",
-          "reviewerEmail": "carter.rivera@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "90 days return policy",
-      "minimumOrderQuantity": 6,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.619Z",
-        "updatedAt": "2024-05-23T08:56:21.619Z",
-        "barcode": "9444582199406",
-        "qrCode": "https://dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png",
-      "username": "pavancos"
-    },
-    {
-      "id": "5",
-      "title": "Red Nail Polish",
-      "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
-      "category": "beauty",
-      "price": 8.99,
-      "discountPercentage": 2.46,
-      "rating": 3.91,
-      "stock": 71,
-      "tags": [
-        "beauty",
-        "nail polish"
-      ],
-      "brand": "Nail Couture",
-      "sku": "YUIIIP4W",
-      "weight": 9,
-      "dimensions": {
-        "width": 8.11,
-        "height": 10.89,
-        "depth": 29.06
-      },
-      "warrantyInformation": "1 year warranty",
-      "shippingInformation": "Ships in 1 week",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 5,
-          "comment": "Very pleased!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Leo Rivera",
-          "reviewerEmail": "leo.rivera@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Great product!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Evan Reed",
-          "reviewerEmail": "evan.reed@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Highly recommended!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Evelyn Sanchez",
-          "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "No return policy",
-      "minimumOrderQuantity": 46,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.619Z",
-        "updatedAt": "2024-05-23T08:56:21.619Z",
-        "barcode": "3212847902461",
-        "qrCode": "https://dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
-      "username": "pavancos"
-    }
-  ]
+  "user-cart": []
 }

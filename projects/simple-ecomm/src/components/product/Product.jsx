@@ -52,7 +52,7 @@ const Product = ({ prod, logText,mainLog }) => {
         
         {
           (logText)?
-            <button type="button" className="btn btn-outline-primary w-100"
+            <button type="button" className="btn btn-outline-danger w-100"
               onClick={() => { mainLog(currProd.id) }}
             >
               {logText}

@@ -46,9 +46,10 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container pt-4 bg-dark-subtle mt-4 rounded rounded-2">
+      <div className="container pt-4 bg-secondary rounded rounded-2">
         <h3 className='text-center text-black'>Cart</h3>
           <div className="d-flex flex-wrap justify-content-evenly pb-3 pt-2 ">
+            {cartProds.length === 0 && <><h5 className='text-center  text-warning border-2 border-warning border p-3 rounded-4'>No products in cart</h5></>}
               {cartProds.map((product) => {
                 return (
                   product.title &&
