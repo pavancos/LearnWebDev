@@ -6,7 +6,7 @@ import React from 'react'
 import { set } from 'react-hook-form';
 
 const UserLoginStore = ({children}) => {
-    let [currUser, setCurrUser] = useState([{}])
+    let [currUser, setCurrUser] = useState([{}]);
     let [err, setErr] = useState('');
     let [loginStatus, setLoginStatus] = useState(false)
     async function loginUser(userDet) {

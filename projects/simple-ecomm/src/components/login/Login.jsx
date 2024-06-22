@@ -15,12 +15,11 @@ const Login = () => {
   async function onSubmit(data) {
     loginUser(data)
     console.log(loginStatus)
-
   }
-  // useEffect(() => {
-  // if (loginStatus) {
-  //   navigate('/')
-  // }},[loginStatus])
+  useEffect(() => {
+  if (loginStatus) {
+    navigate('/')
+  }},[loginStatus])
 
 
   return (

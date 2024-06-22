@@ -10,12 +10,13 @@ import { FaInfoCircle } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
+import UserProfile from '../userprofile/UserProfile'
 import './Header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  let { currUser, loginUser, loginStatus,logoutUser } = useContext(userLoginContext)
+  let { currUser, loginUser, loginStatus, logoutUser } = useContext(userLoginContext)
   const logoutCurr = () => {
     logoutUser()
     navigate('/login')
@@ -23,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     console.log(currUser)
   }, [currUser])
-  
+
   return (
     <nav className="navbar navbar-expand-lg navbar navbar-dark " style={{ backgroundColor: "var(--dark-cyan)" }}>
       <div className="container-fluid">
@@ -47,7 +48,7 @@ const Header = () => {
                     <Link className="nav-link " to="/cart"> <FaShoppingCart style={{ marginRight: '2px' }} />Cart</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" onClick={logoutCurr } > <IoLogOut style={{ marginRight: '2px' }} />Logout</Link>
+                    <Link className="nav-link" onClick={logoutCurr} > <IoLogOut style={{ marginRight: '2px' }} />Logout</Link>
                   </li>
                 </>
                 :
@@ -63,6 +64,18 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link " to="/aboutus"> <FaInfoCircle></FaInfoCircle> About Us</Link>
             </li>
+            {
+              loginStatus &&
+              <li className="nav-item d-flex align-content-center justify-content-center text-center flex-wrap">
+                <div className='d-flex flex-row align-content-center justify-content-center text-center flex-wrap'>
+                  <div style={{ width: '36px' }}>
+                    <img className='rounded rounded-circle w-100' src={currUser.profilepicture} alt="" />
+                  </div>
+
+                  <p className='text-light m-0'>{currUser.username}</p>
+                </div>
+              </li>
+            }
           </ul>
         </div>
       </div>
