@@ -5,28 +5,44 @@ import './Product.css';
 import { set } from 'react-hook-form';
 
 
-const Product = ({ prod }) => {
-  let {currUser,loginUser,loginStatus,logoutUser} = useContext(userLoginContext);
-  let [currProd,setCurrProd]=useState({});
-  useEffect(()=>{
+const Product = ({ prod, log }) => {
+  let { currUser, loginUser, loginStatus, logoutUser } = useContext(userLoginContext);
+  let [currProd, setCurrProd] = useState({});
+  useEffect(() => {
     setCurrProd(prod)
-  },[]);
-  async function addToCart(currProd){
-    try{
-      currProd.username=currUser.username;
-      let res=await fetch('http://localhost:3000/user-cart',{
-        method:"POST",
+  }, []);
+  async function addToCart(currProd) {
+    try {
+      currProd.username = currUser.username;
+      let res = await fetch('http://localhost:3000/user-cart', {
+        method: "POST",
         headers: { "Content-type": "application/json" },
-        body:JSON.stringify(currProd)
+        body: JSON.stringify(currProd)
       })
       console.log(res)
-      if(res.status===201){
+      if (res.status === 201) {
         console.log("product added to cart")
       }
-      }catch(err){
-        console.log(err);
-      }
+    } catch (err) {
+      console.log(err);
     }
+  }
+
+  async function removeFromCart(currProd) {
+    try {
+      const queryURL = `http://localhost:3000/user-cart?id=${currProd.id}&username=${currUser.username}`;
+      let res = await fetch(queryURL, {
+        method: "DELETE"
+      });
+      console.log(res);
+      if (res.status === 200) {
+        console.log("product removed from cart");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <div className="card bg-black border-secondary m-2 p-2 text-light" style={{ maxWidth: '250px' }}>
       <div className="card-header">
@@ -45,11 +61,28 @@ const Product = ({ prod }) => {
 
       </div>
       <div className="card-footer">
+
+        
+        {
+          (log)?
+        log.map((logText) => {
+          return (
+            <button type="button" className="btn btn-outline-primary w-100"
+              onClick={() => { removeFromCart(currProd) }}
+            >
+              {logText}
+            </button>
+          )
+        })
+        :
         <button type="button" className="btn btn-outline-primary w-100"
-        onClick={()=>{addToCart(currProd)}}
+          onClick={() => { addToCart(currProd) }}
         >
           Add to Cart
         </button>
+      } 
+
+        
 
       </div>
     </div>
