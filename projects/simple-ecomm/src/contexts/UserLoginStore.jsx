@@ -60,7 +60,7 @@ const UserLoginStore = ({children}) => {
     }
 
     return (
-        <userLoginContext.Provider value={{ currUser, loginUser,loginStatus,logoutUser,err }}>
+        <userLoginContext.Provider value={{ currUser,setCurrUser, loginUser,loginStatus,logoutUser,err }}>
             {children}
         </userLoginContext.Provider>
     )
