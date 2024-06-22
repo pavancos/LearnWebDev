@@ -30,7 +30,7 @@ const Cart = () => {
           <div className="d-flex flex-wrap justify-content-evenly pb-3 pt-2 ">
               {cartProds.map((product) => {
                 return (
-                  product.username &&
+                  product.title &&
                   <Product prod={product} />
                 )
               })}

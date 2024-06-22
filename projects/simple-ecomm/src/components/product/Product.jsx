@@ -22,7 +22,7 @@ const Product = ({ prod }) => {
       console.log(res)
       if(res.status===201){
         console.log("product added to cart")
-      }  
+      }
       }catch(err){
         console.log(err);
       }
