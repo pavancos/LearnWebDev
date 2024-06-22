@@ -14,7 +14,7 @@ const Edituser = () => {
 
     async function OnProfileUpdate(updatedDetails){
         console.log('updatedDetails: ', updatedDetails);
-        let res = await fetch(`http://localhost:3000/users/${currUser.id}`, {
+        let res = await fetch(`https://usersapi-msfc.onrender.com/users/${currUser.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
