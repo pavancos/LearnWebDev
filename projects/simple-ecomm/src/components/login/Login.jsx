@@ -6,13 +6,16 @@ import { HiEye } from "react-icons/hi";
 import { HiEyeOff } from "react-icons/hi";
 import './Login.css'
 const Login = () => {
-  let { currUser, loginUser, loginStatus } = useContext(userLoginContext)
+
+  let { currUser, loginUser, loginStatus, err } = useContext(userLoginContext)
+  let [showAlert, setShowAlert] = useState(true)
   let [showPass, setShowPass] = useState(false)
   let navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm()
   async function onSubmit(data) {
     loginUser(data)
     console.log(loginStatus)
+
   }
   // useEffect(() => {
   // if (loginStatus) {
@@ -25,6 +28,14 @@ const Login = () => {
       <h3 className=' text-center '>Login</h3>
       <div className="row mx-auto">
         <div className="col-11 col-sm-10 col-md-6 mx-auto">
+          {err && showAlert &&
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>{err}</strong> Check the crederntials and try again
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                onClick={() => setShowAlert(false)}
+              ></button>
+            </div>
+          }
           <form action="" className='' onSubmit={handleSubmit(onSubmit)}>
             {/* username */}
             <div className="form-group mb-1">
