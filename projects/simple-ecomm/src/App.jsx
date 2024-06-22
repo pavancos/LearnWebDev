@@ -4,6 +4,9 @@ import Home from './components/home/Home';
 import Register from './components/register/Register';
 import Login from './components/login/Login';
 import AboutUs from './components/aboutus/AboutUs';
+import Cart from './components/cart/Cart';
+import UserProfile from './components/userprofile/UserProfile';
+import Products from './components/products/Products';
 import RoutingError from './components/RoutingError';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -32,6 +35,34 @@ function App() {
           path: 'aboutus',
           element: <AboutUs />,
         },
+        {
+          path: 'cart',
+          element: <Cart />,
+
+        },
+        {
+          path: 'userprofile',
+          element: <UserProfile />,
+          children:[
+            {
+              path:'products',
+              element:<Products/>
+            },
+            {
+              path:'cart',
+              element:<Cart/>
+            },
+            {
+              path:'',
+              element:<Products/>
+            }
+          ]
+          
+        },
+        {
+          path: 'products',
+          element: <Products />,
+        }
       ],
     },
   ]);

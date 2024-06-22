@@ -66,7 +66,7 @@ const Header = () => {
             </li>
             {
               loginStatus &&
-              <li className="nav-item d-flex align-content-center justify-content-center text-center flex-wrap">
+              <li className="nav-item text-center ">
                 <div className='d-flex flex-row align-content-center justify-content-center text-center flex-wrap'>
                   <div style={{ width: '36px' }}>
                     <img className='rounded rounded-circle w-100' src={currUser.profilepicture} alt="" />
