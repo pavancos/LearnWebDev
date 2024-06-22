@@ -7,8 +7,8 @@ import './Cart.css'
 const Cart = () => {
   let [cartProds, setCartProds] = useState([{}])
   let {currUser} = useContext(userLoginContext)
+  let logText=['Remove from Cart']
 
-  console.log(currUser.username)
   async function getCart() {
     try {
       let res = await fetch('http://localhost:3000/user-cart?username='+currUser.username)
@@ -31,7 +31,7 @@ const Cart = () => {
               {cartProds.map((product) => {
                 return (
                   product.title &&
-                  <Product prod={product} />
+                  <Product prod={product} key={product.id} logText={logText[0]} />
                 )
               })}
           </div>

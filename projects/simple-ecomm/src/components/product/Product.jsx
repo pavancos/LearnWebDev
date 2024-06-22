@@ -5,7 +5,7 @@ import './Product.css';
 import { set } from 'react-hook-form';
 
 
-const Product = ({ prod, log }) => {
+const Product = ({ prod, logText }) => {
   let { currUser, loginUser, loginStatus, logoutUser } = useContext(userLoginContext);
   let [currProd, setCurrProd] = useState({});
   useEffect(() => {
@@ -30,7 +30,7 @@ const Product = ({ prod, log }) => {
 
   async function removeFromCart(currProd) {
     try {
-      const queryURL = `http://localhost:3000/user-cart?id=${currProd.id}&username=${currUser.username}`;
+      const queryURL = `http://localhost:3000/user-cart?id=${currProd.id}`;
       let res = await fetch(queryURL, {
         method: "DELETE"
       });
@@ -64,16 +64,13 @@ const Product = ({ prod, log }) => {
 
         
         {
-          (log)?
-        log.map((logText) => {
-          return (
+          (logText)?
             <button type="button" className="btn btn-outline-primary w-100"
               onClick={() => { removeFromCart(currProd) }}
             >
               {logText}
             </button>
-          )
-        })
+          
         :
         <button type="button" className="btn btn-outline-primary w-100"
           onClick={() => { addToCart(currProd) }}

@@ -27,7 +27,7 @@ const Products = () => {
           <div className="d-flex flex-wrap justify-content-evenly pb-3 pt-2 ">
               {products.map((product) => {
                 return (
-                  <Product prod={product} />
+                  <Product prod={product} key={product.id} />
                 )
               })}
           </div>
