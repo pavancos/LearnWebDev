@@ -8,7 +8,7 @@ const Products = () => {
   
   async function getProducts() {
     try {
-      let res = await fetch('http://localhost:3000/products')
+      let res = await fetch('https://usersapi-msfc.onrender.com/products')
       let products = await res.json()
       setProducts(products)
     } catch (err) {

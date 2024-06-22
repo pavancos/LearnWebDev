@@ -11,7 +11,7 @@ const Cart = () => {
 
   async function getCart() {
     try {
-      let res = await fetch('http://localhost:3000/user-cart?username='+currUser.username)
+      let res = await fetch('https://usersapi-msfc.onrender.com/user-cart?username='+currUser.username)
       let products = await res.json()
       setCartProds(products)
     } catch (err) {
@@ -21,7 +21,7 @@ const Cart = () => {
 
   async function removeFromCart(id) {
     try {
-      const queryURL = `http://localhost:3000/user-cart/${id}`;
+      const queryURL = `https://usersapi-msfc.onrender.com/user-cart/${id}`;
       let res = await fetch(queryURL, {
         method: "DELETE"
       });

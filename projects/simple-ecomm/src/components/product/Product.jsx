@@ -14,7 +14,7 @@ const Product = ({ prod, logText,mainLog }) => {
   async function addToCart(currProd) {
     try {
       currProd.username = currUser.username;
-      let res = await fetch('http://localhost:3000/user-cart', {
+      let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(currProd)

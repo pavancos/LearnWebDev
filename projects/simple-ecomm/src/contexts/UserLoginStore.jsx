@@ -11,8 +11,8 @@ const UserLoginStore = ({children}) => {
     let [loginStatus, setLoginStatus] = useState(false)
     async function loginUser(userDet) {
         try {
-            // let res = await fetch(`https://usersapi-msfc.onrender.com/users?username=${userDet.username}&password=${userDet.password}`)
-            let res = await fetch(`http://localhost:3000/users?username=${userDet.username}&password=${userDet.password}`)
+            let res = await fetch(`https://usersapi-msfc.onrender.com/users?username=${userDet.username}&password=${userDet.password}`)
+            // let res = await fetch(`http://localhost:3000/users?username=${userDet.username}&password=${userDet.password}`)
             
             // let res = await fetch(`https://j46m624g-3000.inc1.devtunnels.ms/users?password=${userDet.password}&username=${userDet.username}`)
             let curr = await res.json()
