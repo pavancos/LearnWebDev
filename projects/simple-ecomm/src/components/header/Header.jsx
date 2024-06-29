@@ -11,7 +11,7 @@ import { IoLogOut } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
 import { MdEdit } from "react-icons/md";
-import UserProfile from '../userprofile/UserProfile'
+import UserProfile from '../userprofile/UserProfile';
 import './Header.css';
 
 const Header = () => {
