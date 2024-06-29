@@ -5,4 +5,5 @@ post http://localhost:3000/users
 put http://localhost:3000/users
 ###
 delete http://localhost:3000/users
-
+###
+get http://localhost:3000/users/2
