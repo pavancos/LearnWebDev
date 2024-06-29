@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+//body parser
+app.use(express.json())
 
 //test data
 let userList=[
@@ -21,14 +23,28 @@ app.get('/users', (req, res) => {
 app.get('/users/:id', (req, res) => {
   let id = req.params.id
   let user = userList.find(user => user.id == id)
-  res.send({message:'userDetails',
-    payload:user
+  // res.send({message:'userDetails',
+  //   payload:user
+  // })
+  if(user){
+    res.send({message:'userDetails',
+      payload:user
+    })
+  }
+  else{
+    res.send({message:'user not found'})
+  }
+})
+
+app.post('/user', (req, res) => {
+  // res.send('Post request')
+  let user = req.body
+  userList.push(user)
+  res.send({message:'user added successfully',
+    payload:userList
   })
 })
 
-app.post('/users', (req, res) => {
-  res.send('Post request')
-})
 
 app.put('/users', (req, res) => {
   res.send('Put request')
