@@ -17,6 +17,15 @@ app.get('/users', (req, res) => {
     payload:userList
   })
 })
+
+app.get('/users/:id', (req, res) => {
+  let id = req.params.id
+  let user = userList.find(user => user.id == id)
+  res.send({message:'userDetails',
+    payload:user
+  })
+})
+
 app.post('/users', (req, res) => {
   res.send('Post request')
 })
