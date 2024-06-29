@@ -4,19 +4,20 @@ const app = express()
 app.use(express.json())
 
 //test data
-let userList=[
+let userList = [
   {
-    id:1, name:'vigesh'
+    id: 1, name: 'vigesh'
   },
   {
-    id:2, name:'pavan'
+    id: 2, name: 'pavan'
   }
 ]
 
 
 app.get('/users', (req, res) => {
-  res.send({message:'usersList',
-    payload:userList
+  res.send({
+    message: 'usersList',
+    payload: userList
   })
 })
 
@@ -26,32 +27,60 @@ app.get('/users/:id', (req, res) => {
   // res.send({message:'userDetails',
   //   payload:user
   // })
-  if(user){
-    res.send({message:'userDetails',
-      payload:user
+  if (user) {
+    res.send({
+      message: 'userDetails',
+      payload: user
     })
   }
-  else{
-    res.send({message:'user not found'})
+  else {
+    res.send({ message: 'user not found' })
   }
 })
 
-app.post('/user', (req, res) => {
+app.post('/users', (req, res) => {
   // res.send('Post request')
   let user = req.body
   userList.push(user)
-  res.send({message:'user added successfully',
-    payload:userList
+  res.send({
+    message: 'user added successfully',
+    payload: userList
   })
 })
 
 
-app.put('/users', (req, res) => {
-  res.send('Put request')
+app.put('/user', (req, res) => {
+  // res.send('Put request')
+  let user = req.body
+  let id = user.id
+  let index = userList.findIndex(user => user.id == id)
+  if (index == -1) {
+    res.send({ message: 'user not found' })
+  }
+  else {
+    userList[index] = user
+    res.send({
+      message: 'user updated successfully',
+      payload: userList
+    })
+  }
 })
 
 app.delete('/users', (req, res) => {
-  res.send('Delete request')
+  // res.send('Delete request')
+  let user = req.body
+  let id = user.id
+  let index = userList.findIndex(user => user.id == id)
+  if (index == -1) {
+    res.send({ message: 'user not found' })
+  }
+  else {
+    userList.splice(index, 1)
+    res.send({
+      message: 'user deleted successfully',
+      payload: userList
+    })
+  }
 })
 
 
