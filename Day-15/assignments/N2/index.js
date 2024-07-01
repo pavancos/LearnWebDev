@@ -24,7 +24,7 @@ const products = [
     }
 ];
 
-app.post('/products', (req, res) => {
+app.post('/product', (req, res) => {
     const product = req.body;
     products.push(product);
     res.send({
@@ -33,7 +33,59 @@ app.post('/products', (req, res) => {
     });
 });
 
+app.get('/products', (req, res) => {
+    res.send({
+        message: 'All products',
+        payload: products
+    });
+});
 
+app.get('/product/:id', (req, res) => {
+    let id = req.params.id;
+    const product = products.find(p => p.id == id);
+    if (!product) {
+        res.send({
+            message: 'Product not found'
+        });
+    }
+    res.send({
+        message: 'Product found',
+        payload: product
+    });
+});
+
+app.put('/product/:id', (req, res) => {
+    let id = req.params.id;
+    const product = products.find(p => p.id == id);
+    if (!product) {
+        res.send({
+            message: 'Product not found'
+        });
+    }
+    product.name = req.body.name;
+    product.price = req.body.price;
+    product.quantity = req.body.quantity;
+    res.send({
+        message: 'Product updated successfully',
+        payload: product
+    });
+});
+
+app.delete('/product/:id', (req, res) => {
+    let id = req.params.id;
+    const product = products.find(p => p.id == id);
+    if (!product) {
+        res.send({
+            message: 'Product not found'
+        });
+    }
+    const index = products.indexOf(product);
+    products.splice(index, 1);
+    res.send({
+        message: 'Product deleted successfully',
+        payload: products
+    });
+});
 
 app.listen(3000, () => {
     console.log('Server is running on port http://localhost:3000');

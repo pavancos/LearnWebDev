@@ -1,4 +1,4 @@
-post http://localhost:3000/products
+post http://localhost:3000/product
 Content-Type: application/json
 
 {
@@ -7,3 +7,19 @@ Content-Type: application/json
     "price": 100,
     "quantity": 1
 }
+###
+get http://localhost:3000/product
+###
+get http://localhost:3000/product/4
+###
+put http://localhost:3000/product/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Sample 1",
+    "price": 100,
+    "quantity": 2
+}
+###
+delete http://localhost:3000/product/4
