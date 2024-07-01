@@ -87,6 +87,6 @@ app.delete('/product/:id', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port http://localhost:3000');
+app.listen(3500, () => {
+    console.log('Server is running on port http://localhost:3500');
 });
