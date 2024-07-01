@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-express.json();
+
+app.use(express.json());
+
 const products = [
     {
         id: 1,
@@ -22,17 +24,17 @@ const products = [
     }
 ];
 
-app.post('/product', (req,res)=>{
+app.post('/products', (req, res) => {
     const product = req.body;
     products.push(product);
-    res.send({message: 'Product added successfully', payload: products});
+    res.send({
+        message: 'Product added successfully',
+        payload: products
+    });
+});
 
-})
 
 
-
-// console.log(products);
 app.listen(3000, () => {
     console.log('Server is running on port http://localhost:3000');
 });
-
