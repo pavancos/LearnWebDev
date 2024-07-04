@@ -17,7 +17,7 @@
         <h1 class="text-center mt-2">Node Assignment-1</h1>
         <div class="container-fluid text-start">
             <div>
-                <h2>first.js</h2>
+                <h4 >first.js</h4>
                 <pre class="language-javascript"><code class="language-js">
 let marks = [96, 95, 89, 79, 90];
 function calcTotalMarks(marksArray) {
@@ -27,7 +27,7 @@ module.exports = { marks, calcTotalMarks };</code>
                 </pre>
             </div>
             <div>
-                <h2>second.js</h2>
+                <h4>second.js</h4>
                 <pre class="language-javascript"><code class="language-js">
 let Data = require('./first');
 let student = {
@@ -40,7 +40,7 @@ module.exports = { student };</code>
                 </pre>
             </div>
             <div>
-                <h2>script.js</h2>
+                <h4>script.js</h4>
                 <pre class="language-javascript"><code class="language-js">
 let fromFirst = require('./first');
 let fromSecond = require('./second');
@@ -49,7 +49,7 @@ console.log(fromSecond);</code>
                 </pre>
             </div>
             <div>
-                <h2>Console</h2>
+                <h4>Console</h4>
                 <pre class="language-javascript"><code class="language-js">
 {
     marks: [ 96, 95, 89, 79, 90 ],
@@ -71,6 +71,7 @@ console.log(fromSecond);</code>
 
         </div>
     </div>
+    <script src="./onClick.js"></script>
     <script src="./assets/prism.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
