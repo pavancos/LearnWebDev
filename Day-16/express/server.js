@@ -2,23 +2,27 @@
 const exp = require('express');
 const app = exp();
 
+const {MongoClient} = require('mongodb');
+let mClient = new MongoClient('mongodb://localhost:27017');
+mClient.connect()
+.then(() => {
+    console.log('Connected to MongoDB');
+}).catch((err) => {
+    console.log('Error while connecting to MongoDB',err);
+});
+
+
 app.get('/', (req, res) => {
     res.send('Welcome to Muiltiple APIs Server');
 });
 
 // Import User API
 const userAPI = require('./APIs/userAPI');
-// If path starts with /user, then userAPI will be called
-app.use('/user', userAPI);
+app.use('/users', userAPI);
 
-// Import Products API
-const productsAPI = require('./APIs/productsAPI');
-// If path starts with /products, then productsAPI will be called
-app.use('/products', productsAPI);
-
-// Import Cart API
-const cartAPI=require('./APIs/cartAPI');
-// If path starts with /cart, the cartAPI will be called
+// Import Product API
+const productAPI = require('./APIs/productAPI');
+app.use('/products', productAPI);
 
 // Assign Port Number to Server
 const port = 3000;

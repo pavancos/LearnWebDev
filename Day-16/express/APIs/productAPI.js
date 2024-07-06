@@ -1,7 +1,7 @@
 // Import Express Module and create a Router instance
 const express = require('express');
-const productsApp = express.Router();
-
+const productsApi = express.Router();
+productsApi.use(express.json());
 // Sample products data
 let productsData = [
     { id: 1, name: 'Product 1', price: 1000 },
@@ -11,12 +11,12 @@ let productsData = [
 ];
 
 // GET Request - Get all products
-productsApp.get('/', (req, res) => {
+productsApi.get('/', (req, res) => {
     res.json(productsData);
 });
 
 // GET Request by ID - Get a specific product
-productsApp.get('/:id', (req, res) => {
+productsApi.get('/:id', (req, res) => {
     let id = req.params.id;
     let product = productsData.find(product => product.id == id);
     if (!product) {
@@ -27,15 +27,15 @@ productsApp.get('/:id', (req, res) => {
 });
 
 // POST Request - Add a new product
-productsApp.use(express.json());
-productsApp.post('/', (req, res) => {
+productsApi.use(express.json());
+productsApi.post('/', (req, res) => {
     let product = req.body;
     productsData.push(product);
     res.json({ message: 'Product added successfully', payload: productsData });
 });
 
 // PUT Request - Update an existing product
-productsApp.put('/:id', (req, res) => {
+productsApi.put('/:id', (req, res) => {
     let product = req.body;
     let index = productsData.findIndex(p => p.id == product.id);
     if (index == -1) {
@@ -47,7 +47,7 @@ productsApp.put('/:id', (req, res) => {
 });
 
 // DELETE Request - Delete a product
-productsApp.delete('/:id', (req, res) => {
+productsApi.delete('/:id', (req, res) => {
     let id = req.params.id; // Use req.params.id for DELETE request
     let index = productsData.findIndex(p => p.id == id);
     if (index == -1) {
@@ -59,4 +59,4 @@ productsApp.delete('/:id', (req, res) => {
 });
 
 // Export the module
-module.exports = productsApp;
+module.exports = productsApi;

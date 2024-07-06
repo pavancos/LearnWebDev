@@ -1,6 +1,8 @@
 // Create mini Express server
-const exp = require('express');
-const userApp = exp.Router();
+const express = require('express');
+const userApi = express.Router();
+
+userApi.use(express.json());
 
 // Test Data
 const usersList = [
@@ -12,11 +14,11 @@ const usersList = [
 //create sample rest api(req handlers)
 
 // GET Request
-userApp.get('/users', (req, res) => {
+userApi.get('/users', (req, res) => {
     res.send({ message: 'All Users', payload: usersList });
 });
 // Send 1 user by id
-userApp.get('/users/:id', (req, res) => {
+userApi.get('/users/:id', (req, res) => {
     const userId = Number(req.params.id);
     //  Search user by id in usersList array 
     let userById = usersList.find(user => user.id == userId);
@@ -29,18 +31,15 @@ userApp.get('/users/:id', (req, res) => {
 });
 
 
-//  add body parser
-userApp.use(exp.json());
-
 // POST request to create a new user
-userApp.post('/users', (req, res) => {
+userApi.post('/users', (req, res) => {
     let newUser = req.body;
     usersList.push(newUser);
     res.send({ message: 'New User Created', payload: newUser });
 });
 
 //  PUT Request to update user by id
-userApp.put('/users', (req, res) => {
+userApi.put('/users', (req, res) => {
     let updatedUser = req.body;
     let index = usersList.findIndex(user => user.id == updatedUser.id);
     if (index === -1) {
@@ -53,7 +52,7 @@ userApp.put('/users', (req, res) => {
 });
 
 // DELETE Request to delete user by id
-userApp.delete('/users/:id', (req, res) => {
+userApi.delete('/users/:id', (req, res) => {
     const userId = Number(req.params.id);
     let index = usersList.findIndex(user => user.id == userId);
     if (index === -1) {
@@ -66,5 +65,5 @@ userApp.delete('/users/:id', (req, res) => {
 });
 
 
-// Export userApp
-module.exports = userApp;
+// Export userApi
+module.exports = userApi;
