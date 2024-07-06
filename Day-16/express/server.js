@@ -1,95 +1,29 @@
-const express = require('express')
-const app = express()
-//body parser
-app.use(express.json())
+// Import Express Module
+const exp = require('express');
+const app = exp();
 
-const middleware = (req, res, next) => {
-  console.log('Middleware')
-  next()
-  res.send('Middleware done')
-}
+app.get('/', (req, res) => {
+    res.send('Welcome to Muiltiple APIs Server');
+});
 
-//test data
-let userList = [
-  {
-    id: 1, name: 'vigesh'
-  },
-  {
-    id: 2, name: 'pavan'
-  }
-]
+// Import User API
+const userAPI = require('./APIs/userAPI');
+// If path starts with /user, then userAPI will be called
+app.use('/user', userAPI);
 
+// Import Products API
+const productsAPI = require('./APIs/productsAPI');
+// If path starts with /products, then productsAPI will be called
+app.use('/products', productsAPI);
 
-app.get('/users', middleware, (req, res) => {
-  res.send({
-    message: 'usersList',
-    payload: userList
-  })
-})
+// Import Cart API
+const cartAPI=require('./APIs/cartAPI');
+// If path starts with /cart, the cartAPI will be called
 
-app.get('/users/:id', (req, res) => {
-  let id = req.params.id
-  let user = userList.find(user => user.id == id)
-  // res.send({message:'userDetails',
-  //   payload:user
-  // })
-  if (user) {
-    res.send({
-      message: 'userDetails',
-      payload: user
-    })
-  }
-  else {
-    res.send({ message: 'user not found' })
-  }
-})
-
-app.post('/users', (req, res) => {
-  // res.send('Post request')
-  let user = req.body
-  userList.push(user)
-  res.send({
-    message: 'user added successfully',
-    payload: userList
-  })
-})
+// Assign Port Number to Server
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server running on port http://localhost:${port}`);
+});
 
 
-app.put('/user', (req, res) => {
-  // res.send('Put request')
-  let user = req.body
-  let id = user.id
-  let index = userList.findIndex(user => user.id == id)
-  if (index == -1) {
-    res.send({ message: 'user not found' })
-  }
-  else {
-    userList[index] = user
-    res.send({
-      message: 'user updated successfully',
-      payload: userList
-    })
-  }
-})
-
-app.delete('/users', (req, res) => {
-  // res.send('Delete request')
-  let user = req.body
-  let id = user.id
-  let index = userList.findIndex(user => user.id == id)
-  if (index == -1) {
-    res.send({ message: 'user not found' })
-  }
-  else {
-    userList.splice(index, 1)
-    res.send({
-      message: 'user deleted successfully',
-      payload: userList
-    })
-  }
-})
-
-
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
-})
