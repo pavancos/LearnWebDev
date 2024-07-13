@@ -22,7 +22,7 @@ userApp.use(exp.json());
 // Create request handler 
 // GET Request
 userApp.get('/users', tokenVerify,async (req, res) => {
-    
+
 
 
     // Get usersCollection object
@@ -134,7 +134,7 @@ userApp.post('/users/login', async (req, res) => {
         }
         else {
             // Create JWT Token
-            let token = jwt.sign({ username: user.username }, 'abcdef',{expiresIn: 20});
+            let token = jwt.sign({ username: user.username }, 'abcdef',{expiresIn: '1h'});
 
             // Send the token to the client
             res.send({ message: "Login Success", token: token,user:user });
