@@ -82,10 +82,16 @@ userApp.post('/users', async (req, res) => {
 });
 
 //  PUT Request to update user by username
-userApp.put('/users:username', (req, res) => {
+userApp.put('/users:username', tokenVerify,expressAsyncHandler((req, res) => {
+    // Get usersCollection object
+    const usersCollection = req.app.get('usersCollection');
 
+    let modifiedUser = req.body;
 
-});
+    // Update the user
+    let result = usersCollection.updateOne({ username: { $eq: modifiedUser.username } }, { $set: modifiedUser });
+    
+}));
 
 // DELETE Request to delete user by id
 userApp.delete('/users/:username', tokenVerify, async (req, res) => {
