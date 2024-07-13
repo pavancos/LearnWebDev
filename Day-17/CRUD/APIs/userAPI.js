@@ -89,7 +89,7 @@ userApp.put('/users:username', (req, res) => {
 });
 
 // DELETE Request to delete user by id
-userApp.delete('/users/:username', async (req, res) => {
+userApp.delete('/users/:username', tokenVerify , async (req, res) => {
 
     // Get usersCollection object
     const usersCollection = req.app.get('usersCollection');
