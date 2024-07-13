@@ -50,7 +50,13 @@ const productsAPI = require('./APIs/productsAPI');
 // If path starts with /products-api, then productsAPI will be called
 app.use('/products-api', productsAPI);
 
-
-
-
-
+//handling invalid path
+app.use("*", (req, res) => {
+    console.log(req.params);
+    res.send({ message: `Invalid Path ${req.params[0]}`  });
+});
+// Error Handler
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.send({ message: 'Error Occurred', reason: err.message });
+});

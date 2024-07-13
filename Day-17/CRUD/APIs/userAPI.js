@@ -2,6 +2,8 @@
 const exp = require('express');
 const userApp = exp.Router();
 
+const expressAsyncHandler = require('express-async-handler');
+
 // Import bcrypt
 const bcrypt = require('bcrypt');
 
@@ -21,10 +23,7 @@ userApp.use(exp.json());
 
 // Create request handler 
 // GET Request
-userApp.get('/users', tokenVerify,async (req, res) => {
-
-
-
+userApp.get('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
     // Get usersCollection object
     const usersCollection = req.app.get('usersCollection');
 
@@ -34,7 +33,7 @@ userApp.get('/users', tokenVerify,async (req, res) => {
     // Send the data to the client
     res.send({ message: "All Users", payload: users });
 
-});
+}));
 // Send 1 user by username
 userApp.get('/users/:username', async (req, res) => {
     // Get usersCollection object
@@ -89,7 +88,7 @@ userApp.put('/users:username', (req, res) => {
 });
 
 // DELETE Request to delete user by id
-userApp.delete('/users/:username', tokenVerify , async (req, res) => {
+userApp.delete('/users/:username', tokenVerify, async (req, res) => {
 
     // Get usersCollection object
     const usersCollection = req.app.get('usersCollection');
@@ -134,10 +133,10 @@ userApp.post('/users/login', async (req, res) => {
         }
         else {
             // Create JWT Token
-            let token = jwt.sign({ username: user.username }, 'abcdef',{expiresIn: '1h'});
+            let token = jwt.sign({ username: user.username }, 'abcdef', { expiresIn: '1h' });
 
             // Send the token to the client
-            res.send({ message: "Login Success", token: token,user:user });
+            res.send({ message: "Login Success", token: token, user: user });
 
         }
     }
