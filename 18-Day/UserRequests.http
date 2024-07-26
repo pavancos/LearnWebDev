@@ -1,0 +1,92 @@
+### Users API Requests
+
+### -> Get All Users
+get http://localhost:4000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdmFua2MiLCJpYXQiOjE3MjE5NzAyNTcsImV4cCI6MTcyMTk3Mzg1N30.ob3TXiGR7H7zRdWwh50_5Af_2a-BpsCaxjGjCfz_mQI
+
+
+### -> Get User By Username
+get http://localhost:4000/user-api/users/vignesh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjA4NzEzNzMsImV4cCI6MTcyMDg3NDk3M30.uq6XRDfs6fsnrGBVVay7u_23vXSBMx50PFNnvXQTgbo
+
+
+### -> Create New User
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Vignesh",
+    "username": "vignesh",
+    "password": "12345678",
+    "email": "vignesh@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "vvsv",
+    "username": "vvsv",
+    "password": "12345678",
+    "email": "vvsv@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Dev Duo",
+    "username": "devduo",
+    "password": "12345678",
+    "email": "devduo@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Pavan Kumar",
+    "username": "pavankc",
+    "password": "pavankc",
+    "email": "pavankc@gmail.com"
+}
+
+
+###  -> Login
+post http://localhost:4000/user-api/users/login
+Content-Type: application/json
+
+{
+    "username": "devduo",
+    "password": "12345678"
+}
+
+
+###  -> Login
+post http://localhost:4000/user-api/users/login
+Content-Type: application/json
+
+{
+    "username": "pavankc",
+    "password": "pavankc"
+}
+
+###
+put http://localhost:4000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhdmFua2MiLCJpYXQiOjE3MjE5NzAxMjcsImV4cCI6MTcyMTk3MzcyN30.o8p9z6WMnsn00tjf_SPsjsQMAgd3pp4YlEgh5j04WOY
+Content-Type: application/json
+
+{
+    "username": "pavan",
+    "name": "Pavan"
+}
+###
+delete http://localhost:4000/user-api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjA4NzEzNzMsImV4cCI6MTcyMDg3NDk3M30.uq6XRDfs6fsnrGBVVay7u_23vXSBMx50PFNnvXQTgbo
+Content-Type: application/json
+
+{
+    "username": "vignesh"
+}

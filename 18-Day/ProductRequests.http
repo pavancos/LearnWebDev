@@ -1,0 +1,5 @@
+### -> Get Products
+get http://localhost:4000/products-api/products
+
+### -> Get Products by ID
+get http://localhost:4000/products-api/products/6
