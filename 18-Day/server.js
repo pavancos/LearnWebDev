@@ -3,7 +3,14 @@
 // Import Express Module
 
 const exp = require('express');
+
 const app = exp();
+// Importing cors
+const cors = require('cors');
+app.use(cors({
+    // origin:'*',
+    origin:'http://localhost:8888'
+}))
 
 // Import dotenv Module
 require('dotenv').config();

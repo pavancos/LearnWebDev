@@ -9,7 +9,9 @@ const Register = () => {
   let [users, setUsers] = useState([{}])
   async function onSubmit(data) {
     try {
-      let res = await fetch('https://usersapi-msfc.onrender.com/users',
+      // onRender
+      // let res = await fetch('https://usersapi-msfc.onrender.com/users',
+      let res = await fetch('http://localhost:4000/user-api/users',
       // let res = await fetch('http://localhost:3000/users',
       {
         method: 'POST',
