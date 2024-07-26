@@ -90,3 +90,11 @@ Content-Type: application/json
 {
     "username": "vignesh"
 }
+
+### -> Add to cart
+put http://localhost:4000/user-api/add/pavankc
+Content-Type: application/json
+
+{
+    "product":{"id":"1"}
+}

@@ -155,7 +155,20 @@ userApp.post('/users/login', expressAsyncHandler(async (req, res) => {
 }));
 
 // User Cart (Protected Route)
-
+userApp.put('/add/:username',expressAsyncHandler(async(req,res)=>{
+    // Get username from URL
+    let username=req.params.username;
+    // Get Cart Collection from APP
+    let cartCollection=req.app.get('cartCollection');
+    // Get Product Obj from the body
+    let product=req.body;
+    let productId=Number(product.product.id);
+    // Get the Product from the Products Collection
+    let productsCollection=req.app.get('productsCollection');
+    let addedProduct=await productsCollection.findOne({id:productId});
+    let result=await cartCollection.updateOne({username:username},{$push:{products:addedProduct}},{upsert:true});
+    res.send({message:"Product Added to Cart",payload:result})
+}))
 
 // Export userApp
 module.exports = userApp;
