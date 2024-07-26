@@ -28,9 +28,9 @@ const Login = () => {
       <div className="row mx-auto">
         <div className="col-11 col-sm-10 col-md-6 mx-auto">
           {err && showAlert &&
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <strong>{err}</strong> Check the crederntials and try again
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+            <div className="alert alert-danger alert-dismissible fade show" role="alert">
+              <p className='d-inline fw-bold ' >{err}</p > Check the crederntials and try again
+              <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"
                 onClick={() => setShowAlert(false)}
               ></button>
             </div>

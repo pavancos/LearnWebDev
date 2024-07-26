@@ -11,43 +11,28 @@ const UserLoginStore = ({children}) => {
     let [loginStatus, setLoginStatus] = useState(false)
     async function loginUser(userDet) {
         try {
-            let res = await fetch(`https://usersapi-msfc.onrender.com/users?username=${userDet.username}&password=${userDet.password}`)
+            // on render Json API
+            // let res = await fetch(`https://usersapi-msfc.onrender.com/users?username=${userDet.username}&password=${userDet.password}`)
             // let res = await fetch(`http://localhost:3000/users?username=${userDet.username}&password=${userDet.password}`)
-            
-            // let res = await fetch(`https://j46m624g-3000.inc1.devtunnels.ms/users?password=${userDet.password}&username=${userDet.username}`)
-            let curr = await res.json()
-            if(curr.length==0){
-                console.log('User not found')
-                setErr("Invalid Username/Password");
-                setCurrUser(null)
-                setLoginStatus(false)
-            }
-            else if(curr[0].password!=userDet.password){
-                console.log("Password incorrect")
-                setErr("Password incorrect")
-                console.log(curr[0].password+" "+userDet.password)
-                setCurrUser(null)
-                setLoginStatus(false)
-            }
-            else{
-                setCurrUser(curr[0])
+            let res = await fetch(`http://localhost:4000/user-api/users/login`,{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify(userDet)
+
+            })
+            let result = await res.json();
+            console.log("User List ",result);
+            if(result.message === "Login Success"){
+                setCurrUser(result.user)
                 setLoginStatus(true)
-                console.log(curr[0])
-                console.log(loginStatus)
+                setErr('')
+            }else{
+                setErr(result.message)
+                setCurrUser({});
+                setLoginStatus(false);
             }
-            
-            // if (curr.length == 0 || curr[0].password != userDet.password) {
-            //     console.log('User not found')
-            //     console.log(curr[0].password+" "+userDet.password)
-            //     setCurrUser(null)
-            //     setLoginStatus(false)
-            // }
-            // else {
-            //     setCurrUser(curr[0])
-            //     setLoginStatus(true)
-            //     console.log(curr[0])
-            //     console.log(loginStatus)            
-            // }
         } catch (err) {
             console.log(err)
             setErr(err)
