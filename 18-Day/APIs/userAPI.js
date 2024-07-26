@@ -167,6 +167,10 @@ userApp.put('/add/:username',expressAsyncHandler(async(req,res)=>{
     let productsCollection=req.app.get('productsCollection');
     let addedProduct=await productsCollection.findOne({id:productId});
     let result=await cartCollection.updateOne({username:username},{$push:{products:addedProduct}},{upsert:true});
+
+    // Get the User Collection
+    let userCollection=req.app.get('usersCollection');
+    let user=await userCollection.updateOne({username:username},{$push:{cart:addedProduct}},{upsert:true});
     res.send({message:"Product Added to Cart",payload:result})
 }))
 

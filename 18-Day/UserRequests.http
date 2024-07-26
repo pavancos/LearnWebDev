@@ -96,5 +96,5 @@ put http://localhost:4000/user-api/add/pavankc
 Content-Type: application/json
 
 {
-    "product":{"id":"1"}
+    "product":{"id":"6"}
 }
