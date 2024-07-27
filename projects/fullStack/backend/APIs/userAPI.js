@@ -84,7 +84,7 @@ userApp.post('/users', expressAsyncHandler(async (req, res) => {
 }));
 
 //  PUT Request to update user by username (Protected Route)
-userApp.put('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
+userApp.put('/users', expressAsyncHandler(async (req, res) => {
 
     // Get usersCollection object
     const usersCollection = req.app.get('usersCollection');
@@ -95,8 +95,10 @@ userApp.put('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
     // Update the user
     let result = await usersCollection.updateOne({ username: { $eq: updatedUser.username } }, { $set: updatedUser });
 
+    let upDated = await usersCollection.findOne({ username: { $eq: updatedUser.username } });
+
     // Send response to the client
-    res.send({ message: "User Updated", payload: result });
+    res.send({ message: "User Updated", payload: result, updatedUser: upDated });
 }));
 
 // DELETE Request to delete user by id (Protected Route)
@@ -191,9 +193,9 @@ userApp.delete('/remove/:username',tokenVerify,expressAsyncHandler(async(req,res
     let userCollection=req.app.get('usersCollection');
     // Get Product Obj from the body
     let product=await req.body;
-    console.log(product)
+    // console.log(product)
     let productId=Number(product.product.id);
-    console.log(productId);
+    // console.log(productId);
     // Get the Product from the Products Collection
     let productsCollection=req.app.get('productsCollection');
     let removedProduct=await productsCollection.findOne({id:productId});
@@ -202,7 +204,9 @@ userApp.delete('/remove/:username',tokenVerify,expressAsyncHandler(async(req,res
     let result=await userCollection.updateOne({username:username},{$pull:{cart:removedProduct}});
     //removing from cart
     let cartCollection=req.app.get('cartCollection');
-    let cartResult=await cartCollection.updateOne({username:username},{$pull:{products:removedProduct}});
+    let cartResult=await cartCollection.updateOne({username:username},{$pull:{products:removedProduct}},{
+        multi:false
+    });
     res.send({message:"Product Removed from Cart",payload:cartResult})
 
 }))

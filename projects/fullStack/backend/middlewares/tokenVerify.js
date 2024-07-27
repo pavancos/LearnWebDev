@@ -20,7 +20,7 @@ const tokenVerify = async (req, res, next) => {
     // Verify the token
     try{
         let decodedToken = jwt.verify(token, process.env.SECRET)
-        console.log("Token Verified")
+        // console.log("Token Verified")
         next();
     }catch(err){
         res.send({message: 'Token Expired Pls Login Again'});
