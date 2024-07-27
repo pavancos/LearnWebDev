@@ -163,14 +163,15 @@ userApp.post('/users/login', expressAsyncHandler(async (req, res) => {
 }));
 
 // User Cart (Protected Route)
-userApp.put('/add/:username',expressAsyncHandler(async(req,res)=>{
+userApp.put('/add/:username',tokenVerify,expressAsyncHandler(async(req,res)=>{
     // Get username from URL
     let username=req.params.username;
     // Get Cart Collection from APP
     let cartCollection=req.app.get('cartCollection');
     // Get Product Obj from the body
-    let product=req.body;
-    let productId=Number(product.product.id);
+    let product=await req.body;
+    console.log(product)
+    let productId=Number(product.id);
     // Get the Product from the Products Collection
     let productsCollection=req.app.get('productsCollection');
     let addedProduct=await productsCollection.findOne({id:productId});
@@ -181,6 +182,31 @@ userApp.put('/add/:username',expressAsyncHandler(async(req,res)=>{
     let user=await userCollection.updateOne({username:username},{$push:{cart:addedProduct}},{upsert:true});
     res.send({message:"Product Added to Cart",payload:result})
 }))
+
+// Removing product from cart (Protected Route)
+userApp.delete('/remove/:username',tokenVerify,expressAsyncHandler(async(req,res)=>{
+    // Get username from URL
+    let username=req.params.username;
+    // Get Cart Collection from APP
+    let userCollection=req.app.get('usersCollection');
+    // Get Product Obj from the body
+    let product=await req.body;
+    console.log(product)
+    let productId=Number(product.product.id);
+    console.log(productId);
+    // Get the Product from the Products Collection
+    let productsCollection=req.app.get('productsCollection');
+    let removedProduct=await productsCollection.findOne({id:productId});
+    // console.log(removedProduct)
+    //removing from user.cart
+    let result=await userCollection.updateOne({username:username},{$pull:{cart:removedProduct}});
+    //removing from cart
+    let cartCollection=req.app.get('cartCollection');
+    let cartResult=await cartCollection.updateOne({username:username},{$pull:{products:removedProduct}});
+    res.send({message:"Product Removed from Cart",payload:cartResult})
+
+}))
+
 
 // Export userApp
 module.exports = userApp;

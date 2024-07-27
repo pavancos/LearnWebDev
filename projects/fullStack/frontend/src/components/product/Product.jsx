@@ -13,17 +13,20 @@ const Product = ({ prod, logText,mainLog }) => {
   }, [prod])
   async function addToCart(currProd) {
     try {
-      currProd.username = currUser.username;
+      console.log("Adding user:", currUser.username)
       // let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', 
-      let res = await fetch('http://localhost:4000/user-api/add/',
+      let res = await fetch(`http://localhost:4000/user-api/add/${currUser.username}`,
       {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
+        method: "PUT",
+        headers: { 
+          "Content-type": "application/json",
+          'Authorization':`Bearer ${sessionStorage.getItem('token')}`
+         },
         body: JSON.stringify(currProd)
       })
       console.log(res)
-      if (res.status === 201) {
-        console.log("product added to cart")
+      if (res.status === 200) {
+        console.log("product added to cart");
       }
     } catch (err) {
       console.log(err);
