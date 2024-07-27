@@ -14,7 +14,7 @@ const tokenVerify = async (req, res, next) => {
     }
     // Extract the token from the bearer token
     const token = bearerToken.split(' ')[1];
-    console.log('token: ', token);
+    // console.log('token: ', token);
 
 
     // Verify the token

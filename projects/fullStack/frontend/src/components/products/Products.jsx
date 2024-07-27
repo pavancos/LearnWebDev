@@ -20,6 +20,7 @@ const Products = () => {
     getProducts()
   })
 
+
   return (
     <>
       <div className="container pt-4 bg-secondary rounded rounded-2">

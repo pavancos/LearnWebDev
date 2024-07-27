@@ -28,6 +28,8 @@ const UserLoginStore = ({children}) => {
                 setCurrUser(result.user)
                 setLoginStatus(true)
                 setErr('')
+                // Storing the token in the session storage
+                sessionStorage.setItem('token',result.token);
             }else{
                 setErr(result.message)
                 setCurrUser({});
@@ -39,9 +41,14 @@ const UserLoginStore = ({children}) => {
         }
     }
 
+    // Log Out Function
     const logoutUser = () => {
+        // updating the cuurentUser to null
         setCurrUser({})
+        // updating the loginStatus
         setLoginStatus(false)
+        // Removing the token from the session Storage
+        sessionStorage.removeItem('token')
     }
 
     return (

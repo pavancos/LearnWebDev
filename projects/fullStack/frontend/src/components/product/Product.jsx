@@ -14,7 +14,9 @@ const Product = ({ prod, logText,mainLog }) => {
   async function addToCart(currProd) {
     try {
       currProd.username = currUser.username;
-      let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', {
+      // let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', 
+      let res = await fetch('http://localhost:4000/products-api/products',
+      {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(currProd)
@@ -31,6 +33,7 @@ const Product = ({ prod, logText,mainLog }) => {
   
 
   return (
+    
     <div className="card bg-black border-secondary m-2 p-2 text-light" style={{ maxWidth: '250px' }}>
       <div className="card-header">
         <h5 className="card-title">{prod.title}</h5>
