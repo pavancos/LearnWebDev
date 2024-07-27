@@ -18,6 +18,8 @@ const Login = () => {
   }
   useEffect(() => {
   if (loginStatus) {
+    // Storing the 
+
     navigate('/')
   }},[loginStatus])
 

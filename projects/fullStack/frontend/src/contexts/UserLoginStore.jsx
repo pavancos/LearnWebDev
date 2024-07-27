@@ -47,6 +47,9 @@ const UserLoginStore = ({children}) => {
         setCurrUser({})
         // updating the loginStatus
         setLoginStatus(false)
+        // Navigation to the login page
+        let navigate = useNavigate()
+        navigate('/')
         // Removing the token from the session Storage
         sessionStorage.removeItem('token')
     }

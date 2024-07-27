@@ -15,7 +15,7 @@ const Product = ({ prod, logText,mainLog }) => {
     try {
       currProd.username = currUser.username;
       // let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', 
-      let res = await fetch('http://localhost:4000/products-api/products',
+      let res = await fetch('http://localhost:4000/user-api/add/',
       {
         method: "POST",
         headers: { "Content-type": "application/json" },
