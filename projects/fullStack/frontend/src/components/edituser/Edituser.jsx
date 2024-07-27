@@ -14,20 +14,25 @@ const Edituser = () => {
 
     async function OnProfileUpdate(updatedDetails){
         console.log('updatedDetails: ', updatedDetails);
-        let res = await fetch(`https://usersapi-msfc.onrender.com/users/${currUser.id}`, {
+        // let res = await fetch(`https://usersapi-msfc.onrender.com/users/${currUser.id}`,
+        let res = await fetch(`http://localhost:4000/user-api/users/`, 
+        {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(updatedDetails)
         })
-        console.log('res: ', res);
-        updatedDetails.id = currUser.id
-        setCurrUser(updatedDetails)
-        if(res.status === 200){
-            navigate('/')
+        let result = await res.json();
+        console.log('result: ', result);
+        if(result.message === "User Updated"){
+            setCurrUser(result.updateuser)
+            navigate('/profile');
+            setError(null)
         }
-        
+        else{
+            setError("Something went wrong");
+        } 
     }
 
     return (
@@ -35,6 +40,7 @@ const Edituser = () => {
             <h3 className=' text-center '>Edit details</h3>
             <div className="row mx-auto">
                 <div className="col-11 col-sm-10 col-md-6 mx-auto">
+                    {error && <p className='alert alert-danger'>{error}</p>}
                     <form action="" className='' onSubmit={handleSubmit(OnProfileUpdate)}>
                         {/* username */}
                         <div className="form-group mb-2">
