@@ -144,10 +144,18 @@ userApp.post('/users/login', expressAsyncHandler(async (req, res) => {
         }
         else {
             // Create JWT Token
-            let token = jwt.sign({ username: user.username },process.env.SECRET , { expiresIn: '1h' });
+            let token = jwt.sign(
+                { username: user.username },
+                process.env.SECRET , 
+                { expiresIn: '1h' }
+            );
 
             // Send the token to the client
-            res.send({ message: "Login Success", token: token, user: user });
+            res.send({
+                message: "Login Success",
+                token: token,
+                user: user
+            });
 
         }
     }

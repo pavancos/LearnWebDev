@@ -22,7 +22,8 @@ productsApp.get('/products',expressAsyncHandler( async (req, res) => {
     } else {
         res.send({
             message: "Products are Here",
-            payload: products
+            payload: products,
+            products: products
         })
     }
 }));
