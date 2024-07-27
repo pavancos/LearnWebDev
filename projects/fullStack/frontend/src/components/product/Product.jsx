@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useContext, useEffect } from 'react';
 import { userLoginContext } from '../../contexts/userLoginContext';
+import { cartContext } from '../../contexts/cartContext';
 import './Product.css';
 import { set } from 'react-hook-form';
 
@@ -8,6 +9,7 @@ import { set } from 'react-hook-form';
 const Product = ({ prod, logText,mainLog }) => {
   let { currUser} = useContext(userLoginContext);
   let [currProd, setCurrProd] = useState({});
+  // let { updatecart } = useContext(cartContext);
   useEffect(() => {
     setCurrProd(prod);
   }, [prod])
@@ -16,7 +18,7 @@ const Product = ({ prod, logText,mainLog }) => {
       console.log("Adding user:", currUser.username)
       // let res = await fetch('https://usersapi-msfc.onrender.com/user-cart', 
       let res = await fetch(`http://localhost:4000/user-api/add/${currUser.username}`,
-      {
+      { 
         method: "PUT",
         headers: { 
           "Content-type": "application/json",
@@ -27,6 +29,7 @@ const Product = ({ prod, logText,mainLog }) => {
       console.log(res)
       if (res.status === 200) {
         console.log("product added to cart");
+        updatecart();
       }
     } catch (err) {
       console.log(err);
