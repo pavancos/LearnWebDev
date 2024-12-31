@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-MultiLine</title>
+</head>
+<body>
+    <textarea name="textInput"></textarea>
+    <button>Submit</button>
+    <h3 id="char"></h3>    
+    <h3 id="word"></h3>    
+    <h3 id="line"></h3>
+    <script>
+        let textInput=document.querySelector('textarea');
+        let char=document.querySelector('#char');
+        let word=document.querySelector('#word');
+        let line=document.querySelector('#line');
+        let button=document.querySelector('button');
+        button.addEventListener('click',()=>{
+            let text=textInput.value;
+            char.textContent=`Characters: ${text.length}`;
+            word.textContent=`Words: ${text.split(' ').length}`;
+            line.textContent=`Lines: ${text.split('\n').length}`;
+            alert(`Characters: ${text.length}\nWords: ${text.split(' ').length}\nLines: ${text.split('\n').length}`)
+        });
+    </script>    
+</body>
+</html>

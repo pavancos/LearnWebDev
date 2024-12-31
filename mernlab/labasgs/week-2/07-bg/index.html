@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-BackgroudColor</title>
+</head>
+
+<body>
+    <input type="text">
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde blandi
+        tiis fugiat, repellat neque inventore, nisi et eligendi pariatur volu
+        ptatibus suscipit voluptates odio veritatis. Error sapiente, quis ipsa
+        m distinctio ipsum eveniet!
+    </p>
+    <script>
+        let input = document.querySelector('input');
+        let p = document.querySelector('p');
+        input.addEventListener('input', function () {
+            p.style.backgroundColor = `#${input.value}`;
+        });
+    </script>
+</body>
+
+</html>

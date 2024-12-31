@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-HomePage</title>
+    <script>
+        document.body.addEventListener('onunload', (event) => {
+            event.preventDefault();
+            alert("Alert: Good Bye!");
+        })
+    </script>
+</head>
+<body onunload="alert('Alert: Good Bye!')" onbeforeunload="alert('Alert: Good Bye!')">
+    <button id="loginBtn">Login</button>
+    <script>
+        let userName;
+
+        document.getElementById('loginBtn').addEventListener('click', function () {
+            userName = prompt('What is your name?');
+            if (userName) {
+                alert(`Welcome, ${userName}!`);
+            } else {
+                alert('Welcome, Guest!');
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+1.	Display version number of the used browser on the screen
+2.	Implement java script prompt(), alert(), confirm() methods with appropriate application
+3.	Write a java script program to accept user input from the browser, and store it in a separate variable, and also display the same value on the browser.
+4.	Write a javascript program to accept user name from the prompt. Then raise a alert message as “ welcome  to XXXXX(name of the person)”,  after that if user Click the Back button or the Home button from your browser's tool bar to navigate to a different page. You should , raise a alert message as” good by XXXX”,  After clicking OK on the alert dialog box, your screen will show the page to which you navigated. (Hint: handle even like onunload)
+5.	Write a Javascript program to find product of two numbers using user defined functions. (Hint: Prompt two numbers input from the user, pass as arguments to product frunction, and display the result again on the browser)
+6.	 Write a JavaScript program to test the first character of a Name  is uppercase or not, if not raise alert message, and prompt the user to again enter the name. 
+7.	Write a JavaScript program to set the background colour of a paragraph.
+8.	Write an HTML page including any required JavaScript that takes a number from one text field in the range of 0 to 999 and shows it in another text field in words. If the number is out of range, it should show “out of range” and if it is not a number, it should show “not a number” message in the result box
+9.	A simple calculator web application that takes two numbers and an operator (+, -, /, * and %) from an HTML page and returns the result page with the operation performed on the operands.
+10.	Write an HTML page that has one input, which can take multi-line text and a submit button. Once the user clicks the submit button, it should show the number of characters, words and lines in the text entered using an alert message. Words are separated with white space and lines are separated with new line character
+11.	Write a Javascript program to  accept 10 employees information from the browser. Display a particular employee information based on their first name.

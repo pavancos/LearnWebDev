@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-Uppercase</title>
+</head>
+<body>
+    <input type="text">
+    <h1></h1>
+    <script>
+        let input = document.querySelector('input');
+        let h1 = document.querySelector('h1');
+        input.addEventListener('input', function () {
+            if (input.value.length == 0) {
+                h1.textContent = 'error';
+                input.focus();
+            } else {
+                if (input.value[0] >= 'A' && input.value[0] <= 'Z') {
+                    h1.textContent = input.value
+                } else {
+                    h1.textContent = 'error';
+                    alert('The first letter should be uppercase');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

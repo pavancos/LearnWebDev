@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Prompts, Alerts, Confirm</title>
+</head>
+
+<body>
+    <button id="promptBtn">
+        Show Prompt
+    </button>
+    <button id="alertBtn">
+        Show Alert
+    </button>
+    <button id="confirmBtn">
+        Show Confirm
+    </button>
+
+    <script>
+        document.getElementById('promptBtn').addEventListener('click', function () {
+            var name = prompt('Prompt: What is your name?');
+            alert('Alert: Hello, ' + name);
+        });
+
+        document.getElementById('alertBtn').addEventListener('click', function () {
+            alert('Alert: You clicked a Button!');
+        });
+
+        document.getElementById('confirmBtn').addEventListener('click', function () {
+            var result = confirm('Confirm: Are you sure?');
+            if (result) {
+                alert('Alert: You clicked OK');
+            } else {
+                alert('Alert: You clicked Cancel');
+            }
+        });
+    </script>
+</body>
+
+</html>

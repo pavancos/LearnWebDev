@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex flex-col justify-center items-center bg-black text-white">
+    <input type="text" name="aOp" class="text-black text-center">
+    <input type="text" name="op" class="text-black text-center">
+    <input type="text" name="bOp" class="text-black text-center">
+    <br>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="calculate()">Calculate</button>
+    <h1></h1>
+    <script>
+        let aOp = document.querySelector('input[name="aOp"]');
+        let op = document.querySelector('input[name="op"]');
+        let bOp = document.querySelector('input[name="bOp"]');
+        let h1 = document.querySelector('h1');
+        function calculate() {
+            let a = Number(aOp.value);
+            let b = Number(bOp.value);
+            if (isNaN(a) || isNaN(b)) {
+                h1.textContent = 'Not a Number';
+            } else {
+                switch (op.value) {
+                    case '+':
+                        h1.textContent = a + b;
+                        break;
+                    case '-':
+                        h1.textContent = a - b;
+                        break;
+                    case '*':
+                        h1.textContent = a * b;
+                        break;
+                    case '/':
+                        h1.textContent = a / b;
+                        break;
+                    default:
+                        h1.textContent = 'Invalid Operator';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

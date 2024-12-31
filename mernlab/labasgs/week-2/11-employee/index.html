@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Employee</title>
+</head>
+<body>
+    <input type="text" name="id">
+    <input type="text" name="name">
+    <input type="text" name="designation">
+    <input type="text" name="salary">
+
+    <div id="details"></div>
+    <div>
+        <h5>Employee Id:</h5>
+        <h1>Name:</h1>
+        <h3>designation:</h3>
+        <h3>Salary:</h3>
+    </div>
+
+    <script>
+        let id = document.querySelector('input[name="id"]');
+        let name = document.querySelector('input[name="name"]');
+        let designation = document.querySelector('input[name="designation"]');
+        let salary = document.querySelector('input[name="salary"]');
+        let details = document.querySelector('#details');
+        let h1 = document.querySelector('h1');
+        let h3 = document.querySelectorAll('h3');
+        let h5 = document.querySelectorAll('h5');
+
+        id.addEventListener('input', function () {
+            details.style.display = 'none';
+        });
+
+        name.addEventListener('input', function () {
+            details.style.display = 'none';
+        });
+
+        designation.addEventListener('input', function () {
+            details.style.display = 'none';
+        });
+
+        salary.addEventListener('input', function () {
+            details.style.display = 'none';
+        });
+
+        let button = document.createElement('button');
+        button.textContent = 'Submit';
+        document.body.appendChild(button);
+
+        button.addEventListener('click', function () {
+            details.style.display = 'block';
+            h1.textContent = name.value;
+
+            h5[0].textContent = `Employee Id: ${id.value}`;
+            h3[0].textContent = `Designation: ${designation.value}`;
+            h3[1].textContent = `Salary: ${salary.value}`;
+        });
+    </script>
+</body>
+</html>
