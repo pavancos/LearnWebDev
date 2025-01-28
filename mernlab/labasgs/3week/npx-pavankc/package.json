@@ -1,0 +1,32 @@
+{
+  "name": "pavankc",
+  "version": "3.0.2",
+  "description": "A personal card for Pavan Kumar Chennupati (@pavancos)",
+  "scripts": {
+    "card": "node bin/card.js"
+  },
+  "bin": {
+    "card": "./bin/card.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavancos/npx-pavankc.git"
+  },
+  "dependencies": {
+    "cross-spawn": "^7.0.6",
+    "npxcard": "^0.1.0"
+  },
+  "author": "Pavan Kumar Chennupati <pavankc005@gmail.com>",
+  "contributors": [
+    "Pavan Kumar Chennupati <pavankc005@gmail.com>"
+  ],
+  "keywords": [
+    "npxcard",
+    "npx",
+    "card"
+  ],
+  "license": "MIT",
+  "resolutions": {
+    "cross-spawn": "7.0.3"
+  }
+}

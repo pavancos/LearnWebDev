@@ -53,4 +53,4 @@ function deleteFile() {
 readFile();
 writeFile();
 appendFile();
-deleteFile();
+// deleteFile();

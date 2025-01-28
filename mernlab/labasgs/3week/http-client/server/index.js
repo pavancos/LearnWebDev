@@ -5,6 +5,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
   res.writeHead(200, { 'Content-Type': 'text/plain' })
   if (req.url === '/') {
+    console.log("Request to / endpoint")
     res.end('/ endpoint')
   } else {
     res.end('404')
