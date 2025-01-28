@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTTP: Client-Server</title>
+</head>
+<script>
+    async function fetchData() {
+        const res = await fetch('http://localhost:5000/')
+        const data = await res.text()
+        await console.log(data)
+        let resHTML = document.querySelector('.resContainer')
+        resHTML.innerHTML = data
+    }
+</script>
+
+<body>
+    <h1>http: client-server</h1>
+    <button onclick="fetchData()">fetch</button>
+    <h1 class="resContainer"></h1>
+</body>
+
+</html>
