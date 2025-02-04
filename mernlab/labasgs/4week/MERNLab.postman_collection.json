@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "60ad7b69-d973-425c-b3c7-ac6a18204398",
+		"name": "MERNLab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35033067"
+	},
+	"item": [
+		{
+			"name": "4week",
+			"item": [
+				{
+					"name": "Students",
+					"item": [
+						{
+							"name": "GetStudents",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/getStudents"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateStudent",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rollno\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/createStudent"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateStudent",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rollno\":\"22501a05e0\",\r\n    \"name\": \"Pavan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/updateStudent"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteStudent",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rollno\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin Sk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/deleteStudent"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employees",
+					"item": [
+						{
+							"name": "GetEmployees",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/getEmployees"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateEmployee",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin\",\r\n    \"role\":\"Project Manager\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/createEmployee"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEmployee",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"22501a05e0\",\r\n    \"name\": \"Pavan\",\r\n    \"role\":\"Sr Dev\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/updateEmployee"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEmployee",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"22501a05g1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/deleteEmployee"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

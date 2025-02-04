@@ -10,7 +10,6 @@ app.get('/', (req, res) => {
         message: "Welcome to Employee Server"
     })
 })
-
 app.get('/getEmployees', async (req, res) => {
     try {
         employees = await JSON.parse(fs.readFileSync('./Employees.json', 'utf-8'));
@@ -26,8 +25,6 @@ app.get('/getEmployees', async (req, res) => {
         }))
     }
 })
-
-
 app.post('/createEmployee', async (req, res) => {
     try {
         employees = await JSON.parse(fs.readFileSync('./Employees.json', 'utf-8'));
@@ -45,7 +42,6 @@ app.post('/createEmployee', async (req, res) => {
         }))
     }
 });
-
 app.put('/updateEmployee', async (req, res) => {
     try {
         employees = await JSON.parse(fs.readFileSync('./Employees.json', 'utf-8'));
@@ -65,7 +61,6 @@ app.put('/updateEmployee', async (req, res) => {
         }))
     }
 })
-
 app.delete('/deleteEmployee', async (req, res) => {
     try {
         employees = await JSON.parse(fs.readFileSync('./Employees.json', 'utf-8'));
@@ -83,7 +78,6 @@ app.delete('/deleteEmployee', async (req, res) => {
         }))
     }
 })
-
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 })

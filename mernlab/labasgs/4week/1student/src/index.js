@@ -1,12 +1,10 @@
 const http = require('http');
 const fs = require('fs');
 const PORT = 3000;
-
 const server = http.createServer(async (req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     let students;
-
     let method = req.method;
     let endpoint = req.url;
     if (method === 'GET' && endpoint === '/') {
@@ -103,10 +101,6 @@ const server = http.createServer(async (req, res) => {
     }
 
 })
-
-
-
-
 server.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 })
