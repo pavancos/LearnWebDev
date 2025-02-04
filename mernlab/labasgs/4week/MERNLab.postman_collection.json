@@ -22,7 +22,43 @@
 								"header": [],
 								"url": "http://localhost:3000/getStudents"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "get",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/getStudents"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 04:52:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "230"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Data is successfully fetched\",\n    \"data\": [\n        {\n            \"rollno\": \"22501a05e0\",\n            \"name\": \"Pavan Kumar\"\n        },\n        {\n            \"rollno\": \"22501a05g7\",\n            \"name\": \"Siddu\"\n        },\n        {\n            \"rollno\": \"22501a05j1\",\n            \"name\": \"Vignesh\"\n        },\n        {\n            \"rollno\": \"22501a05f2\",\n            \"name\": \"Mithil\"\n        }\n    ],\n    \"error\": false\n}"
+								}
+							]
 						},
 						{
 							"name": "CreateStudent",
@@ -43,7 +79,52 @@
 								},
 								"url": "http://localhost:3000/createStudent"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rollno\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/createStudent"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 04:53:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Student is successfully created\",\n    \"error\": false\n}"
+								}
+							]
 						},
 						{
 							"name": "UpdateStudent",
@@ -64,7 +145,52 @@
 								},
 								"url": "http://localhost:3000/updateStudent"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rollno\":\"22501a05e0\",\r\n    \"name\": \"Pavan\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/updateStudent"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 04:53:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Student is successfully updated\",\n    \"error\": false\n}"
+								}
+							]
 						},
 						{
 							"name": "DeleteStudent",
@@ -85,7 +211,52 @@
 								},
 								"url": "http://localhost:3000/deleteStudent"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rollno\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin Sk\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/deleteStudent"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 04:53:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Student is successfully deleted\",\n    \"error\": false\n}"
+								}
+							]
 						}
 					]
 				},
@@ -102,7 +273,51 @@
 								"header": [],
 								"url": "http://localhost:3000/getEmployees"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "get",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/getEmployees"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "293"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"125-WIsrqKejkM4ZKta0xnaStUaYLWE\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 05:15:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"data\": [\n        {\n            \"empId\": \"22501a05e0\",\n            \"name\": \"Pavan\",\n            \"role\": \"Developer\"\n        },\n        {\n            \"empId\": \"22501a05g7\",\n            \"name\": \"Siddu\",\n            \"role\": \"Manager\"\n        },\n        {\n            \"empId\": \"22501a05j1\",\n            \"name\": \"Vignesh\",\n            \"role\": \"Team Lead\"\n        },\n        {\n            \"empId\": \"22501a05f2\",\n            \"name\": \"Mithil\",\n            \"role\": \"Designer\"\n        }\n    ],\n    \"message\": \"Data is fetched Successfully\"\n}"
+								}
+							]
 						},
 						{
 							"name": "CreateEmployee",
@@ -123,7 +338,60 @@
 								},
 								"url": "http://localhost:3000/createEmployee"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"empId\":\"22501a05g1\",\r\n    \"name\": \"Fakkruddin\",\r\n    \"role\":\"Project Manager\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/createEmployee"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-MTez/IvfPpimNqN4h4rShIeN2I4\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 05:16:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Employee is created Successfully\"\n}"
+								}
+							]
 						},
 						{
 							"name": "UpdateEmployee",
@@ -144,7 +412,60 @@
 								},
 								"url": "http://localhost:3000/updateEmployee"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"empId\":\"22501a05e0\",\r\n    \"name\": \"Pavan\",\r\n    \"role\":\"Sr Dev\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/updateEmployee"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-MoOt47p5obXsijY/E9CS6//avT8\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 05:19:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Employee is updated Successfully\"\n}"
+								}
+							]
 						},
 						{
 							"name": "DeleteEmployee",
@@ -165,7 +486,60 @@
 								},
 								"url": "http://localhost:3000/deleteEmployee"
 							},
-							"response": []
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"empId\":\"22501a05g1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/deleteEmployee"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-O0F9r2Uy+41LhP1v9Y5CWacZsMo\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 04 Feb 2025 05:22:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Employee is deleted Successfully\"\n}"
+								}
+							]
 						}
 					]
 				}
