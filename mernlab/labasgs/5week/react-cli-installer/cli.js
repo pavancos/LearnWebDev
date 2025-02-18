@@ -12,7 +12,7 @@ async function createReactApp() {
       type: "input",
       name: "appName",
       message: "Enter your project name:",
-      default: "styledreactapp",
+      default: "new-react-appp",
     },
   ]);
 
