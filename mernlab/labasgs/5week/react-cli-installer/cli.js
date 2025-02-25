@@ -5,30 +5,34 @@ const inquirer = require("inquirer");
 const chalk = require("chalk");
 
 async function createReactApp() {
-  console.log(chalk.blue("\npCreate React App CLI\n"));
+  console.log(chalk.blue("\nCreate React App CLI\n"));
 
   const { appName } = await inquirer.prompt([
     {
       type: "input",
       name: "appName",
       message: "Enter your project name:",
-      default: "new-react-appp",
+      default: "new-react-app",
     },
   ]);
 
-  console.log(chalk.green(`\nCreating React app: ${appName}...\n`));
-  execSync(`npx create-react-app ${appName} --legacy-peer-deps`, { stdio: "inherit" });
+  try {
+    console.log(chalk.green(`\nCreating React app: ${appName}...\n`));
+    execSync(
+      `npx create-react-app ${appName} --use-npm --legacy-peer-deps`,
+      { stdio: "inherit" }
+    );
 
-  console.log(chalk.green("\nInstalling dependencies...\n"));
-  execSync(`cd ${appName} && npm uninstall react react-dom`, { stdio: "inherit" });
-  execSync(`cd ${appName} && npm install react@18 react-dom@18`, { stdio: "inherit" });
-  execSync(`cd ${appName} && npm install`, { stdio: "inherit" });
+    process.chdir(appName);
 
-  console.log(chalk.green("\nInstalling Webpack and Web Vitals...\n"));
-  execSync(`cd ${appName} && npm install webpack web-vitals`, { stdio: "inherit" });
+    console.log(chalk.green("\nEnsuring correct React version...\n"));
+    execSync("npm install react@18 react-dom@18 --force", { stdio: "inherit" });
 
-  console.log(chalk.yellow("\nSetup completed! To start the app, run:\n"));
-  console.log(chalk.cyan(`cd ${appName} && npm run start\n`));
+    console.log(chalk.yellow("\nSetup completed! To start the app, run:\n"));
+    console.log(chalk.cyan(`cd ${appName} && npm start\n`));
+  } catch (error) {
+    console.error(chalk.red("\nAn error occurred while setting up the project:\n"), error);
+  }
 }
 
 createReactApp();
