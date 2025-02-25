@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 const chalk = require("chalk");
 
 async function createReactApp() {
-  console.log(chalk.blue("\nReact CLI Installer\n"));
+  console.log(chalk.blue("\npCreate React App CLI\n"));
 
   const { appName } = await inquirer.prompt([
     {
