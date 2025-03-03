@@ -1,7 +1,7 @@
 const StudentCard = ({student}) => {
   return (
     <div className={
-        `flex flex-col rounded border-1 border-white p-2`
+        `flex flex-col min-w-[250px] rounded border-1 border-white p-2`
     }>
         <div className="w-[50px] h-[50px] flex justify-center align-center">
             <img className="rounded-full " src={student.avatar} alt={student.username.toString()} />

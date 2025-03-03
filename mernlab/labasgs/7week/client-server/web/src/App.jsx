@@ -34,10 +34,10 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col w-[100px]'>
+    <div className='flex flex-col items-center w-screen min-h-screen'>
+      <div className='flex flex-col mx-0 md:mx-auto  md:w-1/2'>
         <h1 className={`text-2xl`}>Users</h1>
-        <div className='flex flex-row w-screen flex-wrap gap-4'>
-
+        <div className='flex flex-col flex-wrap gap-2'>
           {
             !loading &&
             students.map((student) => {
@@ -46,6 +46,7 @@ function App() {
           }
         </div>
       </div>
+    </div>
     </>
   )
 }

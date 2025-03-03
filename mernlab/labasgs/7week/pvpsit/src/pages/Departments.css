@@ -1,0 +1,20 @@
+.departments {
+    text-align: center;
+    padding: 2rem;
+}
+
+.department-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    background: #1e1e1e;
+    color: #EAE0C8;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 200px;
+    text-align: left;
+}

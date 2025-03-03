@@ -32,7 +32,7 @@ app.get('/students', async (req, res) => {
     try {
         let number = req.query.number;
         if (!number) {
-            number = 5;
+            number = 10;
         }
         const students = await retrieveStudents(number);
         res.send({

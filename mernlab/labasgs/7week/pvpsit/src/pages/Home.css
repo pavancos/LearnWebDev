@@ -1,0 +1,24 @@
+.home {
+    text-align: center;
+    padding: 2rem;
+}
+
+.announcements,
+.events {
+    margin: 2rem 0;
+}
+
+.announcements ul,
+.events ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements li,
+.events li {
+    background: #1e1e1e;
+    color: #EAE0C8;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+}

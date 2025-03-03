@@ -1,0 +1,35 @@
+.about {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 2rem;
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #EAE0C8;
+}
+
+h2 {
+    color: #8B6F47;
+}
+
+p,
+ul {
+    color: #EAE0C8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
